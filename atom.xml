@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>凌晨风</title>
+  <subtitle>你想要的，都要自己给予！勇敢一点，坚强一点！错过了，就是一辈子。</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2016-06-16T09:59:48.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Gagarinwjj</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>生成一个SSH</title>
+    <link href="http://yoursite.com/2016/06/16/%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AASSH/"/>
+    <id>http://yoursite.com/2016/06/16/生成一个SSH/</id>
+    <published>2016-06-16T03:00:20.000Z</published>
+    <updated>2016-06-16T09:59:48.000Z</updated>
+    
+    <content type="html">&lt;!-- toc --&gt;
+&lt;h2 id=&quot;ssh是啥&quot;&gt;&lt;a href=&quot;#ssh是啥&quot; class=&quot;headerlink&quot; title=&quot;ssh是啥&quot;&gt;&lt;/a&gt;ssh是啥&lt;/h2&gt;&lt;p&gt;ssh可以用来标识受信任的电脑，因此通讯时不再需要输入密码。&lt;/p&gt;
+&lt;h2 id=&quot;生成ssh&quot;&gt;&lt;a href=&quot;#生成ssh&quot; class=&quot;headerlink&quot; title=&quot;生成ssh&quot;&gt;&lt;/a&gt;生成ssh&lt;/h2&gt;&lt;h3 id=&quot;检查是否已经存在ssh&quot;&gt;&lt;a href=&quot;#检查是否已经存在ssh&quot; class=&quot;headerlink&quot; title=&quot;检查是否已经存在ssh&quot;&gt;&lt;/a&gt;检查是否已经存在ssh&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ls -al ~/.ssh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;生成新的ssh并加入到ssh代理客户端&quot;&gt;&lt;a href=&quot;#生成新的ssh并加入到ssh代理客户端&quot; class=&quot;headerlink&quot; title=&quot;生成新的ssh并加入到ssh代理客户端&quot;&gt;&lt;/a&gt;生成新的ssh并加入到ssh代理客户端&lt;/h3&gt;&lt;h4 id=&quot;生成&quot;&gt;&lt;a href=&quot;#生成&quot; class=&quot;headerlink&quot; title=&quot;生成&quot;&gt;&lt;/a&gt;生成&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ssh-keygen -t rsa -b 4096 -C &lt;span class=&quot;string&quot;&gt;&quot;your_email@example.com&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;添加到代理客户端&quot;&gt;&lt;a href=&quot;#添加到代理客户端&quot; class=&quot;headerlink&quot; title=&quot;添加到代理客户端&quot;&gt;&lt;/a&gt;添加到代理客户端&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$(ssh-agent -s)&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;#后台启动代理客户端&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ ssh-add ~/.ssh/id_rsa &lt;span class=&quot;comment&quot;&gt;#添加&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;添加到GitHub账户&quot;&gt;&lt;a href=&quot;#添加到GitHub账户&quot; class=&quot;headerlink&quot; title=&quot;添加到GitHub账户&quot;&gt;&lt;/a&gt;添加到GitHub账户&lt;/h3&gt;&lt;p&gt;在账户设置里添加。比如&lt;a href=&quot;https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub 账户&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;测试SSH连接性&quot;&gt;&lt;a href=&quot;#测试SSH连接性&quot; class=&quot;headerlink&quot; title=&quot;测试SSH连接性&quot;&gt;&lt;/a&gt;测试SSH连接性&lt;/h3&gt;&lt;p&gt;简洁版&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ssh -T git@github.com&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;详情版&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ssh -vT git@github.com&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;参考链接&quot;&gt;&lt;a href=&quot;#参考链接&quot; class=&quot;headerlink&quot; title=&quot;参考链接&quot;&gt;&lt;/a&gt;参考链接&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://help.github.com/categories/ssh/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub Help - SSH&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;!-- toc --&gt;
+&lt;h2 id=&quot;ssh是啥&quot;&gt;&lt;a href=&quot;#ssh是啥&quot; class=&quot;headerlink&quot; title=&quot;ssh是啥&quot;&gt;&lt;/a&gt;ssh是啥&lt;/h2&gt;&lt;p&gt;ssh可以用来标识受信任的电脑，因此通讯时不再需要输入密码。&lt;/p&gt;
+&lt;h2 id=&quot;生成
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="ssh" scheme="http://yoursite.com/tags/ssh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>物联手记</title>
+    <link href="http://yoursite.com/2015/05/12/%E7%89%A9%E8%81%94%E6%89%8B%E8%AE%B0/"/>
+    <id>http://yoursite.com/2015/05/12/物联手记/</id>
+    <published>2015-05-12T09:37:36.000Z</published>
+    <updated>2016-06-16T10:05:46.000Z</updated>
+    
+    <content type="html">&lt;!-- toc --&gt;
+&lt;h2 id=&quot;回顾&quot;&gt;&lt;a href=&quot;#回顾&quot; class=&quot;headerlink&quot; title=&quot;回顾&quot;&gt;&lt;/a&gt;回顾&lt;/h2&gt;&lt;p&gt;overridePendingTransition&lt;br&gt;android:scaleType&lt;br&gt;onBackPressed&lt;br&gt;启动模式&lt;br&gt;Activity生命周期&lt;br&gt;页面绘图生命周期&lt;br&gt;tabhost&lt;br&gt;actionbar&lt;br&gt;dialog&lt;br&gt;图片缓存&lt;br&gt;工具类封装&lt;/p&gt;
+&lt;h2 id=&quot;阅读模式&quot;&gt;&lt;a href=&quot;#阅读模式&quot; class=&quot;headerlink&quot; title=&quot;阅读模式&quot;&gt;&lt;/a&gt;阅读模式&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;秒读&lt;/code&gt; 信息快速定位，脑海中转瞬即逝的感觉&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;快读&lt;/code&gt; 只关注主谓宾，其他忽略&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;正常&lt;/code&gt; normal&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;精读&lt;/code&gt; 美文感悟型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Android设备的屏幕参数&quot;&gt;&lt;a href=&quot;#Android设备的屏幕参数&quot; class=&quot;headerlink&quot; title=&quot;Android设备的屏幕参数&quot;&gt;&lt;/a&gt;Android设备的屏幕参数&lt;/h2&gt;&lt;h3 id=&quot;四种屏幕尺寸分类&quot;&gt;&lt;a href=&quot;#四种屏幕尺寸分类&quot; class=&quot;headerlink&quot; title=&quot;四种屏幕尺寸分类&quot;&gt;&lt;/a&gt;四种屏幕尺寸分类&lt;/h3&gt;&lt;p&gt;Small（小，3.5英寸及以下），&lt;br&gt;Normal（正常，3.5-4.3英寸），&lt;br&gt;Large（大，4.3-5.0英寸），&lt;br&gt;Xlarge（超大，5.0英寸以上）&lt;/p&gt;
+&lt;h3 id=&quot;四种分辨率密度分类&quot;&gt;&lt;a href=&quot;#四种分辨率密度分类&quot; class=&quot;headerlink&quot; title=&quot;四种分辨率密度分类&quot;&gt;&lt;/a&gt;四种分辨率密度分类&lt;/h3&gt;&lt;p&gt;ldpi（低，480&lt;em&gt;320及以下），&lt;br&gt;mdpi（中等，480&lt;/em&gt;320-800&lt;em&gt;480），&lt;br&gt;hdpi（高，800&lt;/em&gt;480-1280&lt;em&gt;720），&lt;br&gt;xhdpi（特高，1920&lt;/em&gt;1080），&lt;br&gt;xxhdpi目前仅有Nexus 10使用（2560*1600）。&lt;br&gt;DPI是“dot per inch”的缩写，即每英寸像素数。  &lt;/p&gt;
+&lt;p&gt;一般情况下的普通屏幕：ldpi是120，mdpi是160，hdpi是240，xhdpi是320。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;th&gt;低密度&lt;/th&gt;
+&lt;th&gt;中密度&lt;/th&gt;
+&lt;th&gt;高密度&lt;/th&gt;
+&lt;th&gt;超高密度&lt;/th&gt;
+&lt;th&gt;超超高密度&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;清晰度&lt;/td&gt;
+&lt;td&gt;ldpi&lt;/td&gt;
+&lt;td&gt;mdpi&lt;/td&gt;
+&lt;td&gt;hdpi&lt;/td&gt;
+&lt;td&gt;xhdpi&lt;/td&gt;
+&lt;td&gt;xxhdpi&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;比例&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;图标&lt;/td&gt;
+&lt;td&gt;36&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;72&lt;/td&gt;
+&lt;td&gt;96&lt;/td&gt;
+&lt;td&gt;144&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DPI&lt;/td&gt;
+&lt;td&gt;120&lt;/td&gt;
+&lt;td&gt;160&lt;/td&gt;
+&lt;td&gt;240&lt;/td&gt;
+&lt;td&gt;320&lt;/td&gt;
+&lt;td&gt;480&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;自定义字体&quot;&gt;&lt;a href=&quot;#自定义字体&quot; class=&quot;headerlink&quot; title=&quot;自定义字体&quot;&gt;&lt;/a&gt;自定义字体&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;// 1、目录：assets
+// 2、路径：fonts/xx.ttf
+// 3、大小：&amp;lt;3M
+
+// Typeface font = Typeface
+// .createFromFile(&amp;quot;file:///android_asset/fonts/fontawesome-webfont.ttf&amp;quot;);
+
+ Typeface font = Typeface.createFromAsset(getAssets(), &amp;quot;fonts/fontawesome-webfont.ttf&amp;quot;);
+
+((TextView) findViewById(R.id.textView1)).setTypeface(font);
+
+
+&amp;lt;TextView
+android:id=&amp;quot;@+id/textView1&amp;quot;
+android:layout_width=&amp;quot;wrap_content&amp;quot;
+android:layout_height=&amp;quot;wrap_content&amp;quot;
+android:text=&amp;quot;@string/fa_camera&amp;quot;
+android:textAppearance=&amp;quot;?android:attr/textAppearanceLarge&amp;quot;
+android:textColor=&amp;quot;#000fff&amp;quot;
+android:textSize=&amp;quot;15sp&amp;quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;MacPro&quot;&gt;&lt;a href=&quot;#MacPro&quot; class=&quot;headerlink&quot; title=&quot;MacPro&quot;&gt;&lt;/a&gt;MacPro&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;16,568
+2.2GHz 四核 Intel Core i7，Turbo Boost 高达 3.4GHz
+16GB 1600MHz DDR3L SDRAM
+基于 PCIe 的 512GB 闪存
+Intel Iris Pro Graphics
+背光键盘 (简体) 与使用手册 (中文)
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;17,988(1420↑)
+2.5GHz 四核 Intel Core i7，Turbo Boost 高达 3.7GHz ↑
+16GB 1600MHz DDR3L SDRAM
+基于 PCIe 的 512GB 闪存
+Intel Iris Pro Graphics 图形处理器和配备 2GB GDDR5 显存的 NVIDIA GeForce GT 750M 图形处理器↑
+背光键盘 (简体) 与使用手册 (中文)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;程序员&quot;&gt;&lt;a href=&quot;#程序员&quot; class=&quot;headerlink&quot; title=&quot;程序员&quot;&gt;&lt;/a&gt;程序员&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;熬夜&lt;/li&gt;
+&lt;li&gt;久坐&lt;/li&gt;
+&lt;li&gt;外卖和泡面&lt;/li&gt;
+&lt;li&gt;缺乏锻炼&lt;/li&gt;
+&lt;li&gt;用眼过度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;TODO&quot;&gt;&lt;a href=&quot;#TODO&quot; class=&quot;headerlink&quot; title=&quot;TODO&quot;&gt;&lt;/a&gt;TODO&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/stormzhang/9GAG&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/stormzhang/9GAG&lt;/a&gt;  完整示例&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://yeungeek.com/2014/09/15/eclipse%E4%B8%AD%E4%BD%BF%E7%94%A8gradle%E6%9E%84%E5%BB%BAandroid/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://yeungeek.com/2014/09/15/eclipse%E4%B8%AD%E4%BD%BF%E7%94%A8gradle%E6%9E%84%E5%BB%BAandroid/&lt;/a&gt;  gradle&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.jianshu.com/p/52446bda49ce&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jianshu.com/p/52446bda49ce&lt;/a&gt; gradle&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.jianshu.com/p/4a0713000c3b&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jianshu.com/p/4a0713000c3b&lt;/a&gt; android学习之路&lt;/p&gt;
+&lt;p&gt;github.io、gradle、nodejs、eoe特刊…&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;takeshot&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// Bitmap bitmap = Bitmap.createBitmap(cameraPreview.getWidth(),&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// cameraPreview.getHeight(), Bitmap.Config.ARGB_8888);&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// Canvas canvas = cameraPreview.getHolder().lockCanvas();&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// Paint p = new Paint();&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// p.setColor(Color.RED);&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// canvas.drawCircle(0, 0, 230, p);&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// cameraPreview.getHolder().unlockCanvasAndPost(canvas);&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	ll_play_container.setDrawingCacheEnabled(&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	ll_play_container.buildDrawingCache(&lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	Bitmap bitmap = ll_play_container.getDrawingCache();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;try&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		File file = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; File(Environment.getExternalStorageDirectory()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				+ &lt;span class=&quot;string&quot;&gt;&quot;/&quot;&lt;/span&gt; + System.currentTimeMillis() + &lt;span class=&quot;string&quot;&gt;&quot;.png&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		FileOutputStream fos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		fos = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; FileOutputStream(file);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;// cameraPreview.setDrawingCacheEnabled(true);&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;// cameraPreview.buildDrawingCache(true);&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;// cameraPreview.getDrawingCache();&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		bitmap.compress(Bitmap.CompressFormat.PNG, &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;, fos);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		fos.close();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		CustomToast.show(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;file saved&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125; &lt;span class=&quot;keyword&quot;&gt;catch&lt;/span&gt; (FileNotFoundException e) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		e.printStackTrace();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125; &lt;span class=&quot;keyword&quot;&gt;catch&lt;/span&gt; (IOException e) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		e.printStackTrace();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;Webview&quot;&gt;&lt;a href=&quot;#Webview&quot; class=&quot;headerlink&quot; title=&quot;Webview&quot;&gt;&lt;/a&gt;Webview&lt;/h2&gt;&lt;p&gt;本地&lt;br&gt;    &lt;code&gt;file:///android_asset/&lt;/code&gt;&lt;br&gt;SD卡&lt;br&gt;     &lt;code&gt;content://com.android.htmlfileprovider/sdcard/&lt;/code&gt;&lt;br&gt;     &lt;code&gt;file:///sdcard/&lt;/code&gt;&lt;br&gt;     &lt;code&gt;file:/sdcard&lt;/code&gt;&lt;br&gt;远程&lt;br&gt;     &lt;code&gt;http://www.baidu.com&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;iCam-关键测试步骤&quot;&gt;&lt;a href=&quot;#iCam-关键测试步骤&quot; class=&quot;headerlink&quot; title=&quot;iCam 关键测试步骤&quot;&gt;&lt;/a&gt;iCam 关键测试步骤&lt;/h2&gt;&lt;p&gt;1 绑定设备&lt;br&gt;2 恢复出厂设置&lt;br&gt;3 删除设备&lt;br&gt;4 重新绑定设备&lt;br&gt;5 视频观看&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;!-- toc --&gt;
+&lt;h2 id=&quot;回顾&quot;&gt;&lt;a href=&quot;#回顾&quot; class=&quot;headerlink&quot; title=&quot;回顾&quot;&gt;&lt;/a&gt;回顾&lt;/h2&gt;&lt;p&gt;overridePendingTransition&lt;br&gt;android:scaleType&lt;br&gt;onBackP
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>优秀的ANDROID开源框架</title>
+    <link href="http://yoursite.com/2015/05/09/%E4%BC%98%E7%A7%80android%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6/"/>
+    <id>http://yoursite.com/2015/05/09/优秀android开源框架/</id>
+    <published>2015-05-09T09:05:24.000Z</published>
+    <updated>2016-06-16T10:05:53.000Z</updated>
+    
+    <content type="html">&lt;!-- toc --&gt;
+&lt;h1 id=&quot;Current-List-Utility&quot;&gt;&lt;a href=&quot;#Current-List-Utility&quot; class=&quot;headerlink&quot; title=&quot;Current List Utility&quot;&gt;&lt;/a&gt;Current List Utility&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Droid-fu &lt;a href=&quot;http://github.com/kaeppler/droid-fu&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://github.com/kaeppler/droid-fu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android-screenshot-library&lt;a href=&quot;http://code.google.com/p/android-screenshot-library/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/android-screenshot-library/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android-alarm-database&lt;a href=&quot;http://code.google.com/p/android-alarm-database/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/android-alarm-database/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;OpenIntents &lt;a href=&quot;http://code.google.com/p/openintents/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/openintents/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ACRA &lt;a href=&quot;http://code.google.com/p/acra/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/acra/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;AndroidAnnotations &lt;a href=&quot;http://code.google.com/p/androidannotations/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/androidannotations/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;AndroidAsync &lt;a href=&quot;https://bitbucket.org/hal/android-async/wiki/Home&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://bitbucket.org/hal/android-async/wiki/Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Roboguice &lt;a href=&quot;http://code.google.com/p/roboguice/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/roboguice/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The Missing Android XML Junit Test&lt;br&gt;Runner&lt;a href=&quot;http://code.google.com/p/the-missing-android-xml-junit-test-runner/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/the-missing-android-xml-junit-test-runner/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Maven Android Plugin &lt;a href=&quot;http://code.google.com/p/maven-android-plugin/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/maven-android-plugin/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Droid@Screen &lt;a href=&quot;http://blog.ribomation.com/2010/01/droidscreen/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.ribomation.com/2010/01/droidscreen/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Memory Sucker &lt;a href=&quot;https://github.com/nollbit/memory-sucker&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/nollbit/memory-sucker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;Persistence&quot;&gt;&lt;a href=&quot;#Persistence&quot; class=&quot;headerlink&quot; title=&quot;Persistence&quot;&gt;&lt;/a&gt;Persistence&lt;/h1&gt;&lt;h2 id=&quot;XML&quot;&gt;&lt;a href=&quot;#XML&quot; class=&quot;headerlink&quot; title=&quot;XML&quot;&gt;&lt;/a&gt;XML&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Simple XML Serialization Library &lt;a href=&quot;http://simple.sourceforge.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://simple.sourceforge.net/&lt;/a&gt;&lt;br&gt;(with Android&lt;br&gt;Instructions&lt;a href=&quot;http://robertmassaioli.wordpress.com/2011/04/21/simple-xml-in-android…&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://robertmassaioli.wordpress.com/2011/04/21/simple-xml-in-android…&lt;/a&gt;&lt;br&gt;)&lt;h2 id=&quot;JSON&quot;&gt;&lt;a href=&quot;#JSON&quot; class=&quot;headerlink&quot; title=&quot;JSON&quot;&gt;&lt;/a&gt;JSON&lt;/h2&gt;&lt;/li&gt;
+&lt;li&gt;GSON JSON Serialization Library&lt;a href=&quot;http://code.google.com/p/google-gson/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/google-gson/&lt;/a&gt;&lt;br&gt;(with Android&lt;br&gt;Instructions&lt;a href=&quot;http://benjii.me/2010/04/deserializing-json-in-android-using-gson/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://benjii.me/2010/04/deserializing-json-in-android-using-gson/&lt;/a&gt;&lt;br&gt;)&lt;/li&gt;
+&lt;li&gt;Jackson JSON Serialization Library &lt;a href=&quot;http://jackson.codehaus.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://jackson.codehaus.org/&lt;/a&gt;&lt;h2 id=&quot;SQL&quot;&gt;&lt;a href=&quot;#SQL&quot; class=&quot;headerlink&quot; title=&quot;SQL&quot;&gt;&lt;/a&gt;SQL&lt;/h2&gt;&lt;/li&gt;
+&lt;li&gt;SQLite ORM called ormlite &lt;a href=&quot;http://ormlite.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://ormlite.com/&lt;/a&gt; (with Android&lt;br&gt;Instrutctions &lt;a href=&quot;http://ormlite.com/sqlite_java_android_orm.shtml&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://ormlite.com/sqlite_java_android_orm.shtml&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;Network&quot;&gt;&lt;a href=&quot;#Network&quot; class=&quot;headerlink&quot; title=&quot;Network&quot;&gt;&lt;/a&gt;Network&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Ganymed SSH2 &lt;a href=&quot;http://www.ganymed.ethz.ch/ssh2/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.ganymed.ethz.ch/ssh2/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;oauth-signpost &lt;a href=&quot;http://code.google.com/p/oauth-signpost/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/oauth-signpost/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ksoap2-android &lt;a href=&quot;http://code.google.com/p/ksoap2-android/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/ksoap2-android/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Urban Airship Push&lt;br&gt;Notifications&lt;a href=&quot;http://urbanairship.com/products/push-notifications/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://urbanairship.com/products/push-notifications/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Deacon Project Push Notifications &lt;a href=&quot;http://deacon.daverea.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://deacon.daverea.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;Barcode-QR-Code-Image-Processing&quot;&gt;&lt;a href=&quot;#Barcode-QR-Code-Image-Processing&quot; class=&quot;headerlink&quot; title=&quot;Barcode/QR-Code/Image Processing&quot;&gt;&lt;/a&gt;Barcode/QR-Code/Image Processing&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;ZXing &lt;a href=&quot;http://code.google.com/p/zxing/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/zxing/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;jjil &lt;a href=&quot;http://code.google.com/p/jjil/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/jjil/&lt;/a&gt; (Image Processing)&lt;/li&gt;
+&lt;li&gt;OpenASURF &lt;a href=&quot;https://github.com/chbfiv/OpenASURF&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/chbfiv/OpenASURF&lt;/a&gt; (Image Processing)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;Contacts-Social-Network&quot;&gt;&lt;a href=&quot;#Contacts-Social-Network&quot; class=&quot;headerlink&quot; title=&quot;Contacts/Social Network&quot;&gt;&lt;/a&gt;Contacts/Social Network&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;AndroidLibs &lt;a href=&quot;http://www.androidlibs.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.androidlibs.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Jackcess (MS Access) &lt;a href=&quot;http://jackcess.sourceforge.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://jackcess.sourceforge.net/&lt;/a&gt; (small Android&lt;br&gt;FIX)&lt;a href=&quot;http://sourceforge.net/tracker/?func=detail&amp;amp;aid=3101578&amp;amp;group_id=1349…&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://sourceforge.net/tracker/?func=detail&amp;amp;aid=3101578&amp;amp;group_id=1349…&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Twitter4J &lt;a href=&quot;http://twitter4j.org/en/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://twitter4j.org/en/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Facebook Android SDK &lt;a href=&quot;https://github.com/facebook/facebook-android-sdk&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/facebook/facebook-android-sdk&lt;/a&gt;&lt;br&gt;Payment&lt;/li&gt;
+&lt;li&gt;Mobile Payment Library&lt;a href=&quot;https://www.x.com/community/ppx/xspaces/mobile/mep&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.x.com/community/ppx/xspaces/mobile/mep&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;UI-stuff&quot;&gt;&lt;a href=&quot;#UI-stuff&quot; class=&quot;headerlink&quot; title=&quot;UI stuff&quot;&gt;&lt;/a&gt;UI stuff&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;android-coverflow &lt;a href=&quot;http://code.google.com/p/android-coverflow/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/android-coverflow/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android-flip3d &lt;a href=&quot;http://code.google.com/p/android-flip3d/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/android-flip3d/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android-menu-navigator&lt;a href=&quot;http://code.google.com/p/android-menu-navigator/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/android-menu-navigator/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android-section-list &lt;a href=&quot;http://code.google.com/p/android-section-list/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/android-section-list/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android-wheel &lt;a href=&quot;http://code.google.com/p/android-wheel/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/android-wheel/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GreenDroid &lt;a href=&quot;https://github.com/cyrilmottier/GreenDroid#readme&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/cyrilmottier/GreenDroid#readme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android-actionbar &lt;a href=&quot;http://github.com/johannilsson/android-actionbar&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://github.com/johannilsson/android-actionbar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ActionBarSherlock &lt;a href=&quot;http://actionbarsherlock.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://actionbarsherlock.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;svg-android &lt;a href=&quot;http://code.google.com/p/svg-android/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/svg-android/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android-viewflow &lt;a href=&quot;https://github.com/pakerfeldt/android-viewflow&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/pakerfeldt/android-viewflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android-pulltorefresh&lt;a href=&quot;https://github.com/johannilsson/android-pulltorefresh&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/johannilsson/android-pulltorefresh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;flattr4android &lt;a href=&quot;http://flattr4android.com/sdk/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://flattr4android.com/sdk/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android-colorpickerpreference&lt;a href=&quot;https://github.com/attenzione/android-ColorPickerPreference&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/attenzione/android-ColorPickerPreference&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android-autofittextview&lt;a href=&quot;https://github.com/grantland/android-autofittextview&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/grantland/android-autofittextview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Android native icons vector pack &lt;a href=&quot;http://yay.se/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://yay.se/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The Missing Android&lt;br&gt;Tabwidget&lt;a href=&quot;http://code.google.com/p/themissingtabwidget/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/themissingtabwidget/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tree View List Android&lt;a href=&quot;http://code.google.com/p/tree-view-list-android/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/tree-view-list-android/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android 的 3D 旋转&lt;br&gt;DroidUX &lt;a href=&quot;http://droidux.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://droidux.com/&lt;/a&gt; (UI component library)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;Mixed-Allround&quot;&gt;&lt;a href=&quot;#Mixed-Allround&quot; class=&quot;headerlink&quot; title=&quot;Mixed/Allround&quot;&gt;&lt;/a&gt;Mixed/Allround&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;CWAC (CommonsWare Android Components) &lt;a href=&quot;http://commonsware.com/cwac&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://commonsware.com/cwac&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;libs-for-android &lt;a href=&quot;http://code.google.com/p/libs-for-android/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/libs-for-android/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android-misc-widgets &lt;a href=&quot;http://code.google.com/p/android-misc-widgets/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/android-misc-widgets/&lt;/a&gt;&lt;br&gt;Maps&lt;/li&gt;
+&lt;li&gt;android-mapviewballoons&lt;a href=&quot;https://github.com/jgilfelt/android-mapviewballoons&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/jgilfelt/android-mapviewballoons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;osmdroid &lt;a href=&quot;http://code.google.com/p/osmdroid/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/osmdroid/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;mapsforge &lt;a href=&quot;http://code.google.com/p/mapsforge/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/mapsforge/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;Game-Engines-3D-stuff&quot;&gt;&lt;a href=&quot;#Game-Engines-3D-stuff&quot; class=&quot;headerlink&quot; title=&quot;Game Engines/3D stuff&quot;&gt;&lt;/a&gt;Game Engines/3D stuff&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;libgdx &lt;a href=&quot;http://code.google.com/p/libgdx/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/libgdx/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;forget3d &lt;a href=&quot;http://code.google.com/p/forget3d/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/forget3d/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;min3d &lt;a href=&quot;http://code.google.com/p/min3d/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/min3d/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;rokon &lt;a href=&quot;http://code.google.com/p/rokon/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/rokon/&lt;/a&gt; (unmaintained game engine,&lt;br&gt;author suggests libgdx &lt;a href=&quot;http://code.google.com/p/libgdx/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/libgdx/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Angle &lt;a href=&quot;http://code.google.com/p/angle/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/angle/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;AndEngine &lt;a href=&quot;http://code.google.com/p/andengine/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/andengine/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;jMonkeyEngine &lt;a href=&quot;http://code.google.com/p/jmonkeyengine/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/jmonkeyengine/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;Image-Processing-and-Graphics&quot;&gt;&lt;a href=&quot;#Image-Processing-and-Graphics&quot; class=&quot;headerlink&quot; title=&quot;Image Processing and Graphics&quot;&gt;&lt;/a&gt;Image Processing and Graphics&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;OpenCV for Android &lt;a href=&quot;http://billmccord.github.com/OpenCV-Android/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://billmccord.github.com/OpenCV-Android/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;Translation&quot;&gt;&lt;a href=&quot;#Translation&quot; class=&quot;headerlink&quot; title=&quot;Translation&quot;&gt;&lt;/a&gt;Translation&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Google Translate API Java &lt;a href=&quot;http://code.google.com/p/google-api-translate-java/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/google-api-translate-java/&lt;/a&gt; (Not specific for Android, but works)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;Testing&quot;&gt;&lt;a href=&quot;#Testing&quot; class=&quot;headerlink&quot; title=&quot;Testing&quot;&gt;&lt;/a&gt;Testing&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Apphance &lt;a href=&quot;http://apphance.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://apphance.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Borachio &lt;a href=&quot;http://borachio.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://borachio.com/&lt;/a&gt; (Android&lt;br&gt;Instructions&lt;a href=&quot;http://www.paulbutcher.com/2011/03/mock-objects-on-android-with-borac…&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.paulbutcher.com/2011/03/mock-objects-on-android-with-borac…&lt;/a&gt;&lt;br&gt;)&lt;/li&gt;
+&lt;li&gt;Android Mock &lt;a href=&quot;http://code.google.com/p/android-mock/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/android-mock/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Robolectric &lt;a href=&quot;http://pivotal.github.com/robolectric/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://pivotal.github.com/robolectric/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Robotium &lt;a href=&quot;http://code.google.com/p/robotium/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/robotium/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android-error-reporter&lt;a href=&quot;https://github.com/tomquist/Android-Error-Reporter&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/tomquist/Android-Error-Reporter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;nativedriver &lt;a href=&quot;http://code.google.com/p/nativedriver/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/nativedriver/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;TTS-STT&quot;&gt;&lt;a href=&quot;#TTS-STT&quot; class=&quot;headerlink&quot; title=&quot;TTS / STT&quot;&gt;&lt;/a&gt;TTS / STT&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Eyes Free &lt;a href=&quot;http://code.google.com/p/eyes-free&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/eyes-free&lt;/a&gt; (A TTS Library)&lt;/li&gt;
+&lt;li&gt;android 推送系统（ 基于XMPP）&lt;a href=&quot;http://androidpn.sourceforge.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://androidpn.sourceforge.net/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android FTP 开源程序 swiftp &lt;a href=&quot;http://code.google.com/p/swiftp/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/swiftp/&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;pocketsphinx 微软公司研究语言识别系统 可用于android&lt;br&gt;这是微软公司研究人员开发的最新的适用于嵌入式设备上的语言识别系统的源代码，&lt;br&gt;继承了优秀语音识别软件sphinx的优点，用于开发嵌入式系统上的应用。&lt;br&gt;各种demo的svn地址&lt;br&gt;&lt;a href=&quot;http://cmusphinx.svn.sourceforge.net/viewvc/cmusphinx/trunk/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://cmusphinx.svn.sourceforge.net/viewvc/cmusphinx/trunk/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;!-- toc --&gt;
+&lt;h1 id=&quot;Current-List-Utility&quot;&gt;&lt;a href=&quot;#Current-List-Utility&quot; class=&quot;headerlink&quot; title=&quot;Current List Utility&quot;&gt;&lt;/a&gt;Current List 
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2015/05/09/hello-world/"/>
+    <id>http://yoursite.com/2015/05/09/hello-world/</id>
+    <published>2015-05-09T07:03:24.000Z</published>
+    <updated>2016-06-16T10:05:59.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;http://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;http://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;http://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- toc --&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;http://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;http://hexo.io/docs/server.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Server&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Generate-static-files&quot;&gt;&lt;a href=&quot;#Generate-static-files&quot; class=&quot;headerlink&quot; title=&quot;Generate static files&quot;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;http://hexo.io/docs/generating.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Generating&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Deploy-to-remote-sites&quot;&gt;&lt;a href=&quot;#Deploy-to-remote-sites&quot; class=&quot;headerlink&quot; title=&quot;Deploy to remote sites&quot;&gt;&lt;/a&gt;Deploy to remote sites&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;http://hexo.io/docs/deployment.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;http://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;http://hexo.io
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>

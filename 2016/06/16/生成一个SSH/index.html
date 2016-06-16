@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="凌晨风">
-    <title>Hello World - 凌晨风</title>
+    <title>生成一个SSH - 凌晨风</title>
     <meta name="author" content="Gagarinwjj">
     
     
@@ -15,22 +15,28 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-
-Quic">
+    <meta name="description" content="ssh是啥ssh可以用来标识受信任的电脑，因此通讯时不再需要输入密码。
+生成ssh检查是否已经存在ssh1ls -al ~/.ssh
+生成新的ssh并加入到ssh代理客户端生成1ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;
+添加到代理客户端1eval &quot;$(ssh-agent -s)&quot; #后台启动代理客户端
+1$ ssh-add ~/">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2015/05/09/hello-world/index.html">
+<meta property="og:title" content="生成一个SSH">
+<meta property="og:url" content="http://yoursite.com/2016/06/16/生成一个SSH/index.html">
 <meta property="og:site_name" content="凌晨风">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-
-Quic">
-<meta property="og:updated_time" content="2016-06-16T10:05:59.000Z">
+<meta property="og:description" content="ssh是啥ssh可以用来标识受信任的电脑，因此通讯时不再需要输入密码。
+生成ssh检查是否已经存在ssh1ls -al ~/.ssh
+生成新的ssh并加入到ssh代理客户端生成1ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;
+添加到代理客户端1eval &quot;$(ssh-agent -s)&quot; #后台启动代理客户端
+1$ ssh-add ~/">
+<meta property="og:updated_time" content="2016-06-16T09:59:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-
-Quic">
+<meta name="twitter:title" content="生成一个SSH">
+<meta name="twitter:description" content="ssh是啥ssh可以用来标识受信任的电脑，因此通讯时不再需要输入密码。
+生成ssh检查是否已经存在ssh1ls -al ~/.ssh
+生成新的ssh并加入到ssh代理客户端生成1ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;
+添加到代理客户端1eval &quot;$(ssh-agent -s)&quot; #后台启动代理客户端
+1$ ssh-add ~/">
     
     
         
@@ -200,13 +206,13 @@ Quic">
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            Hello World
+            生成一个SSH
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" datetime="2015-05-09T15:03:24+08:00">
+    <time itemprop="datePublished" datetime="2016-06-16T11:00:20+08:00">
 	
-		    5月 09, 2015
+		    6月 16, 2016
     	
     </time>
     
@@ -216,28 +222,35 @@ Quic">
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h1 id="table-of-contents">目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <h1 id="table-of-contents">目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ssh是啥"><span class="toc-text">ssh是啥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成ssh"><span class="toc-text">生成ssh</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#检查是否已经存在ssh"><span class="toc-text">检查是否已经存在ssh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#生成新的ssh并加入到ssh代理客户端"><span class="toc-text">生成新的ssh并加入到ssh代理客户端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#生成"><span class="toc-text">生成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#添加到代理客户端"><span class="toc-text">添加到代理客户端</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加到GitHub账户"><span class="toc-text">添加到GitHub账户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试SSH连接性"><span class="toc-text">测试SSH连接性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考链接"><span class="toc-text">参考链接</span></a></li></ol>
+<h2 id="ssh是啥"><a href="#ssh是啥" class="headerlink" title="ssh是啥"></a>ssh是啥</h2><p>ssh可以用来标识受信任的电脑，因此通讯时不再需要输入密码。</p>
+<h2 id="生成ssh"><a href="#生成ssh" class="headerlink" title="生成ssh"></a>生成ssh</h2><h3 id="检查是否已经存在ssh"><a href="#检查是否已经存在ssh" class="headerlink" title="检查是否已经存在ssh"></a>检查是否已经存在ssh</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
+<h3 id="生成新的ssh并加入到ssh代理客户端"><a href="#生成新的ssh并加入到ssh代理客户端" class="headerlink" title="生成新的ssh并加入到ssh代理客户端"></a>生成新的ssh并加入到ssh代理客户端</h3><h4 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">"your_email@example.com"</span></span><br></pre></td></tr></table></figure>
+<h4 id="添加到代理客户端"><a href="#添加到代理客户端" class="headerlink" title="添加到代理客户端"></a>添加到代理客户端</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">"<span class="variable">$(ssh-agent -s)</span>"</span> <span class="comment">#后台启动代理客户端</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add ~/.ssh/id_rsa <span class="comment">#添加</span></span><br></pre></td></tr></table></figure>
+<h3 id="添加到GitHub账户"><a href="#添加到GitHub账户" class="headerlink" title="添加到GitHub账户"></a>添加到GitHub账户</h3><p>在账户设置里添加。比如<a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account" target="_blank" rel="external">GitHub 账户</a></p>
+<h3 id="测试SSH连接性"><a href="#测试SSH连接性" class="headerlink" title="测试SSH连接性"></a>测试SSH连接性</h3><p>简洁版<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
+<p>详情版<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -vT git@github.com</span><br></pre></td></tr></table></figure></p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="https://help.github.com/categories/ssh/" target="_blank" rel="external">GitHub Help - SSH</a></p>
 
             
         </div>
     </div>
     <div id="post-footer" class="post-footer main-content-wrap">
         
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">标签</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/git/">git</a> <a class="tag tag--primary tag--small t-link" href="/tags/ssh/">ssh</a>
+
+            </div>
+        
         <div class="post-actions-wrap">
     <nav>
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/05/09/优秀android开源框架/"  data-tooltip="优秀的ANDROID开源框架">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -245,7 +258,7 @@ Quic">
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/05/12/物联手记/" data-tooltip="物联手记">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -260,17 +273,17 @@ Quic">
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2015/05/09/hello-world/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2016/06/16/生成一个SSH/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2015/05/09/hello-world/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/06/16/生成一个SSH/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2015/05/09/hello-world/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2016/06/16/生成一个SSH/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -294,8 +307,8 @@ Quic">
 
         
             
-                <div id="ds-thread" class="ds-thread" data-thread-key="2015/05/09/hello-world/"
-     data-title="Hello World" data-url="http://yoursite.com/2015/05/09/hello-world/">
+                <div id="ds-thread" class="ds-thread" data-thread-key="2016/06/16/生成一个SSH/"
+     data-title="生成一个SSH" data-url="http://yoursite.com/2016/06/16/生成一个SSH/">
 </div>
 
             
@@ -319,7 +332,7 @@ Quic">
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/05/09/优秀android开源框架/"  data-tooltip="优秀的ANDROID开源框架">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -327,7 +340,7 @@ Quic">
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/05/12/物联手记/" data-tooltip="物联手记">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -342,17 +355,17 @@ Quic">
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2015/05/09/hello-world/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2016/06/16/生成一个SSH/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2015/05/09/hello-world/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/06/16/生成一个SSH/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2015/05/09/hello-world/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2016/06/16/生成一个SSH/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -378,17 +391,17 @@ Quic">
                 <div id="share-options-bar" class="share-options-bar" data-behavior="4">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2015/05/09/hello-world/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2016/06/16/生成一个SSH/">
                 <i class="fa fa-google-plus"></i><span class="">分享到 Google+</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2015/05/09/hello-world/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/06/16/生成一个SSH/">
                 <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2015/05/09/hello-world/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2016/06/16/生成一个SSH/">
                 <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
             </a>
         </li>
