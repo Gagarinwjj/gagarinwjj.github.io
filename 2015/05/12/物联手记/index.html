@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="我的博客小栈" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>物联手记 | 凌晨风</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="回顾overridePendingTransitionandroid:scaleTypeonBackPressed启动模式Activity生命周期页面绘图生命周期tabhostactionbardialog图片缓存工具类封装
+##阅读模式##
+
+秒读 信息快速定位，脑海中转瞬即逝的感觉
+快读 只关注主谓宾，其他忽略
+正常 normal
+精读 美文感悟型
+
+Android设备的屏幕参数###四种屏幕">
+<meta property="og:type" content="article">
+<meta property="og:title" content="物联手记">
+<meta property="og:url" content="http://yoursite.com/2015/05/12/物联手记/index.html">
+<meta property="og:site_name" content="凌晨风">
+<meta property="og:description" content="回顾overridePendingTransitionandroid:scaleTypeonBackPressed启动模式Activity生命周期页面绘图生命周期tabhostactionbardialog图片缓存工具类封装
+##阅读模式##
+
+秒读 信息快速定位，脑海中转瞬即逝的感觉
+快读 只关注主谓宾，其他忽略
+正常 normal
+精读 美文感悟型
+
+Android设备的屏幕参数###四种屏幕">
+<meta property="og:updated_time" content="2015-05-12T09:37:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="物联手记">
+<meta name="twitter:description" content="回顾overridePendingTransitionandroid:scaleTypeonBackPressed启动模式Activity生命周期页面绘图生命周期tabhostactionbardialog图片缓存工具类封装
+##阅读模式##
+
+秒读 信息快速定位，脑海中转瞬即逝的感觉
+快读 只关注主谓宾，其他忽略
+正常 normal
+精读 美文感悟型
+
+Android设备的屏幕参数###四种屏幕">
+  
+  
+    <link rel="icon" href="/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="凌晨风" rel="home">凌晨风</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">你想要的，都要自己给予！勇敢一点，坚强一点！错过了，就是一辈子。</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">首页</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">归档</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-物联手记" class="post-物联手记 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      物联手记
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="/2015/05/12/物联手记/#comments" class="leave-reply">回复</a>
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2015/05/12/物联手记/" data-id="cipho7t6i000104efg11rxad5" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h2 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h2><p>overridePendingTransition<br>android:scaleType<br>onBackPressed<br>启动模式<br>Activity生命周期<br>页面绘图生命周期<br>tabhost<br>actionbar<br>dialog<br>图片缓存<br>工具类封装</p>
+<p>##阅读模式##</p>
+<ul>
+<li><code>秒读</code> 信息快速定位，脑海中转瞬即逝的感觉</li>
+<li><code>快读</code> 只关注主谓宾，其他忽略</li>
+<li><code>正常</code> normal</li>
+<li><code>精读</code> 美文感悟型</li>
+</ul>
+<h2 id="Android设备的屏幕参数"><a href="#Android设备的屏幕参数" class="headerlink" title="Android设备的屏幕参数"></a>Android设备的屏幕参数</h2><p>###四种屏幕尺寸分类</p>
+<p>Small（小，3.5英寸及以下），<br>Normal（正常，3.5-4.3英寸），<br>Large（大，4.3-5.0英寸），<br>Xlarge（超大，5.0英寸以上）</p>
+<p>###四种分辨率密度分类</p>
+<p>ldpi（低，480<em>320及以下），<br>mdpi（中等，480</em>320-800<em>480），<br>hdpi（高，800</em>480-1280<em>720），<br>xhdpi（特高，1920</em>1080），<br>xxhdpi目前仅有Nexus 10使用（2560*1600）。<br>DPI是“dot per inch”的缩写，即每英寸像素数。  </p>
+<p>一般情况下的普通屏幕：ldpi是120，mdpi是160，hdpi是240，xhdpi是320。</p>
+<table>
+<thead>
+<tr>
+<th>描述</th>
+<th>低密度</th>
+<th>中密度</th>
+<th>高密度</th>
+<th>超高密度</th>
+<th>超超高密度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>清晰度</td>
+<td>ldpi</td>
+<td>mdpi</td>
+<td>hdpi</td>
+<td>xhdpi</td>
+<td>xxhdpi</td>
+</tr>
+<tr>
+<td>比例</td>
+<td>3</td>
+<td>4</td>
+<td>6</td>
+<td>8</td>
+<td>12</td>
+</tr>
+<tr>
+<td>图标</td>
+<td>36</td>
+<td>48</td>
+<td>72</td>
+<td>96</td>
+<td>144</td>
+</tr>
+<tr>
+<td>DPI</td>
+<td>120</td>
+<td>160</td>
+<td>240</td>
+<td>320</td>
+<td>480</td>
+</tr>
+</tbody>
+</table>
+<p>##自定义字体</p>
+<pre><code>// 1、目录：assets
+// 2、路径：fonts/xx.ttf
+// 3、大小：&lt;3M
+
+// Typeface font = Typeface
+// .createFromFile(&quot;file:///android_asset/fonts/fontawesome-webfont.ttf&quot;);
+
+ Typeface font = Typeface.createFromAsset(getAssets(), &quot;fonts/fontawesome-webfont.ttf&quot;);
+
+((TextView) findViewById(R.id.textView1)).setTypeface(font);
+
+
+&lt;TextView
+android:id=&quot;@+id/textView1&quot;
+android:layout_width=&quot;wrap_content&quot;
+android:layout_height=&quot;wrap_content&quot;
+android:text=&quot;@string/fa_camera&quot;
+android:textAppearance=&quot;?android:attr/textAppearanceLarge&quot;
+android:textColor=&quot;#000fff&quot;
+android:textSize=&quot;15sp&quot; /&gt;
+</code></pre><p>##MacPro<br>    16,568<br>    2.2GHz 四核 Intel Core i7，Turbo Boost 高达 3.4GHz<br>    16GB 1600MHz DDR3L SDRAM<br>    基于 PCIe 的 512GB 闪存<br>    Intel Iris Pro Graphics<br>    背光键盘 (简体) 与使用手册 (中文)</p>
+<hr>
+<pre><code>17,988(1420↑)
+2.5GHz 四核 Intel Core i7，Turbo Boost 高达 3.7GHz ↑
+16GB 1600MHz DDR3L SDRAM
+基于 PCIe 的 512GB 闪存
+Intel Iris Pro Graphics 图形处理器和配备 2GB GDDR5 显存的 NVIDIA GeForce GT 750M 图形处理器↑
+背光键盘 (简体) 与使用手册 (中文)
+</code></pre><p>##程序员</p>
+<ul>
+<li>熬夜</li>
+<li>久坐</li>
+<li>外卖和泡面</li>
+<li>缺乏锻炼</li>
+<li>用眼过度</li>
+</ul>
+<p>##TODO<br><a href="https://github.com/stormzhang/9GAG" target="_blank" rel="external">https://github.com/stormzhang/9GAG</a>  完整示例</p>
+<p><a href="http://yeungeek.com/2014/09/15/eclipse%E4%B8%AD%E4%BD%BF%E7%94%A8gradle%E6%9E%84%E5%BB%BAandroid/" target="_blank" rel="external">http://yeungeek.com/2014/09/15/eclipse%E4%B8%AD%E4%BD%BF%E7%94%A8gradle%E6%9E%84%E5%BB%BAandroid/</a>  gradle</p>
+<p><a href="http://www.jianshu.com/p/52446bda49ce" target="_blank" rel="external">http://www.jianshu.com/p/52446bda49ce</a> gradle</p>
+<p><a href="http://www.jianshu.com/p/4a0713000c3b" target="_blank" rel="external">http://www.jianshu.com/p/4a0713000c3b</a> android学习之路</p>
+<p>github.io、gradle、nodejs、eoe特刊…</p>
+<pre><code>private void takeshot() {
+
+// Bitmap bitmap = Bitmap.createBitmap(cameraPreview.getWidth(),
+// cameraPreview.getHeight(), Bitmap.Config.ARGB_8888);
+// Canvas canvas = cameraPreview.getHolder().lockCanvas();
+// Paint p = new Paint();
+// p.setColor(Color.RED);
+// canvas.drawCircle(0, 0, 230, p);
+// cameraPreview.getHolder().unlockCanvasAndPost(canvas);
+
+ll_play_container.setDrawingCacheEnabled(true);
+ll_play_container.buildDrawingCache(false);
+Bitmap bitmap = ll_play_container.getDrawingCache();
+
+try {
+    File file = new File(Environment.getExternalStorageDirectory()
+            + &quot;/&quot; + System.currentTimeMillis() + &quot;.png&quot;);
+    FileOutputStream fos;
+    fos = new FileOutputStream(file);
+
+    // cameraPreview.setDrawingCacheEnabled(true);
+    // cameraPreview.buildDrawingCache(true);
+    // cameraPreview.getDrawingCache();
+
+    bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+    fos.close();
+    CustomToast.show(this, &quot;file saved&quot;);
+} catch (FileNotFoundException e) {
+
+    e.printStackTrace();
+
+} catch (IOException e) {
+
+    e.printStackTrace();
+
+}
+
+}
+</code></pre><p>##webview</p>
+<p>本地<br>    <code>file:///android_asset/</code><br>SD卡<br>     <code>content://com.android.htmlfileprovider/sdcard/</code><br>     <code>file:///sdcard/</code><br>     <code>file:/sdcard</code><br>远程<br>     <code>http://www.baidu.com</code></p>
+<p>##iCam 关键测试步骤<br>1 绑定设备<br>2 恢复出厂设置<br>3 删除设备<br>4 重新绑定设备<br>5 视频观看</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2015/05/12/物联手记/">
+    <time datetime="2015-05-12T09:37:36.000Z" class="entry-date">
+        2015-05-12
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2015/05/09/优秀android开源框架/" rel="next">优秀的ANDROID开源框架 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+<section id="comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-物联手记" data-title="物联手记" data-url="http://yoursite.com/2015/05/12/物联手记/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:'gagarinwjj'};
+    (function() {
+	  var ds = document.createElement('script');
+	  ds.type = 'text/javascript';ds.async = true;
+	  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	  ds.charset = 'UTF-8';
+	  (document.getElementsByTagName('head')[0]
+	   || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+  <!-- 多说公共JS代码 end -->
+</section>
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Music</h3>
+    <div class="widget-content">
+      <audio src="http://gagarinwjj.github.io/assets/music.mp3" controls="controls"
+             style="width:100%">
+        您的浏览器不支持 audio 标签。
+      </audio>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2015/05/12/物联手记/">物联手记</a>
+          </li>
+        
+          <li>
+            <a href="/2015/05/09/优秀android开源框架/">优秀的ANDROID开源框架</a>
+          </li>
+        
+          <li>
+            <a href="/2015/05/09/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2016 Gagarinwjj
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
