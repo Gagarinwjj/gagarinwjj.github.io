@@ -29,7 +29,7 @@
 生成新的ssh并加入到ssh代理客户端生成1ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;
 添加到代理客户端1eval &quot;$(ssh-agent -s)&quot; #后台启动代理客户端
 1$ ssh-add ~/">
-<meta property="og:updated_time" content="2016-06-16T09:59:48.000Z">
+<meta property="og:updated_time" content="2016-06-17T09:52:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="生成一个SSH">
 <meta name="twitter:description" content="ssh是啥ssh可以用来标识受信任的电脑，因此通讯时不再需要输入密码。
@@ -37,6 +37,7 @@
 生成新的ssh并加入到ssh代理客户端生成1ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;
 添加到代理客户端1eval &quot;$(ssh-agent -s)&quot; #后台启动代理客户端
 1$ ssh-add ~/">
+<meta name="twitter:creator" content="@gagarinwjj">
     
         <meta rel="publisher" content="https://plus.google.com/+gagarinwjj"/>
     
@@ -47,6 +48,9 @@
         <meta property="og:image" content="https://avatars0.githubusercontent.com/u/1587247?v=3&amp;s=460"/>
     
     
+    
+        <meta property="og:image" content="http://gagarinwjj.github.io/2016/06/16/生成一个SSH/photos/global_cover.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://gagarinwjj.github.io/2016/06/16/生成一个SSH/photos/global_cover.jpg" />
     
     
     <!--STYLES-->
@@ -61,12 +65,6 @@
             <!-- Define author's picture -->
 
 
-    
-        
-            
-        
-    
-
 <header id="header" data-behavior="4">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <h1 class="header-title">
@@ -74,11 +72,11 @@
     </h1>
     
         
-            <a  class="header-right-picture "
-                href="#about">
+            <a  class="header-right-icon st-search-show-outputs"
+                href="#search">
         
         
-            <img class="header-picture" src="https://avatars0.githubusercontent.com/u/1587247?v=3&amp;s=460"/>
+            <i class="fa fa-lg fa-search"></i>
         
         </a>
     
@@ -123,7 +121,7 @@
                     >
                 
                     <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
-                    <span class="sidebar-button-desc">分类</span>
+                    <span class="sidebar-button-desc">所有分类</span>
                 </a>
         </li>
         
@@ -135,7 +133,7 @@
                     >
                 
                     <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
-                    <span class="sidebar-button-desc">标签</span>
+                    <span class="sidebar-button-desc">所有标签</span>
                 </a>
         </li>
         
@@ -183,8 +181,62 @@
                 
                     <a  class="sidebar-button-link " href="https://github.com/gagarinwjj" target="_blank">
                 
-                    <i class="sidebar-button-icon fa fa-lg fa-https://avatars0.githubusercontent.com/u/1587247?v=3&amp;s=460"></i>
+                    <i class="sidebar-button-icon fa fa-lg fa-github"></i>
                     <span class="sidebar-button-desc">GitHub</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="http://stackoverflow.com/users" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+                    <span class="sidebar-button-desc">Stack Overflow</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://twitter.com/" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+                    <span class="sidebar-button-desc">Twitter</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://facebook.com/" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-facebook"></i>
+                    <span class="sidebar-button-desc">Facebook</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://plus.google.com/" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-google-plus"></i>
+                    <span class="sidebar-button-desc">Google Plus</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://www.linkedin.com/profile/" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
+                    <span class="sidebar-button-desc">LinkedIn</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="mailto:1045399273@qq.com" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-envelope-o"></i>
+                    <span class="sidebar-button-desc">邮箱</span>
                 </a>
         </li>
         
@@ -192,20 +244,30 @@
     
         <ul class="sidebar-buttons">
         
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/atom.xml"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                    <span class="sidebar-button-desc">RSS</span>
+                </a>
+        </li>
+        
     </ul>
     
 </nav>
 
             
-            <div id="main" data-behavior="4"
-                 class="
-                        hasCoverMetaIn
-                        ">
-                
-<article class="post" itemscope itemType="http://schema.org/BlogPosting">
-    
-    
-        <div class="post-header main-content-wrap text-left">
+        <div class="post-header-cover
+                    text-left
+                    "
+             style="background-image:url('/2016/06/16/生成一个SSH/photos/global_cover.jpg');"
+             data-behavior="4">
+            
+                <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
             生成一个SSH
@@ -218,9 +280,25 @@
     	
     </time>
     
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/工具/">工具</a>
+
+
+    
 </div>
 
 </div>
+            
+        </div>
+
+            <div id="main" data-behavior="4"
+                 class="hasCover
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
@@ -252,7 +330,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/06/17/测试/"  data-tooltip="测试">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -334,7 +412,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/06/17/测试/"  data-tooltip="测试">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
