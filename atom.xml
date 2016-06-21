@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gagarinwjj.github.io/"/>
-  <updated>2016-06-17T10:34:02.000Z</updated>
+  <updated>2016-06-21T06:47:29.000Z</updated>
   <id>http://gagarinwjj.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://gagarinwjj.github.io/2016/06/17/%E6%B5%8B%E8%AF%95/"/>
     <id>http://gagarinwjj.github.io/2016/06/17/测试/</id>
     <published>2016-06-17T08:35:56.000Z</published>
-    <updated>2016-06-17T10:34:02.000Z</updated>
+    <updated>2016-06-21T06:47:29.000Z</updated>
     
     <content type="html">&lt;p&gt;这只是一个测试而已。&lt;/p&gt;
 </content>
@@ -42,10 +42,9 @@
     <link href="http://gagarinwjj.github.io/2016/06/16/%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AASSH/"/>
     <id>http://gagarinwjj.github.io/2016/06/16/生成一个SSH/</id>
     <published>2016-06-16T03:00:20.000Z</published>
-    <updated>2016-06-17T10:35:48.000Z</updated>
+    <updated>2016-06-21T06:53:30.000Z</updated>
     
-    <content type="html">&lt;!-- toc --&gt;
-&lt;h2 id=&quot;ssh是啥&quot;&gt;&lt;a href=&quot;#ssh是啥&quot; class=&quot;headerlink&quot; title=&quot;ssh是啥&quot;&gt;&lt;/a&gt;ssh是啥&lt;/h2&gt;&lt;p&gt;ssh可以用来标识受信任的电脑，因此通讯时不再需要输入密码。&lt;/p&gt;
+    <content type="html">&lt;!-- excerpt --&gt;
 &lt;h2 id=&quot;生成ssh&quot;&gt;&lt;a href=&quot;#生成ssh&quot; class=&quot;headerlink&quot; title=&quot;生成ssh&quot;&gt;&lt;/a&gt;生成ssh&lt;/h2&gt;&lt;h3 id=&quot;检查是否已经存在ssh&quot;&gt;&lt;a href=&quot;#检查是否已经存在ssh&quot; class=&quot;headerlink&quot; title=&quot;检查是否已经存在ssh&quot;&gt;&lt;/a&gt;检查是否已经存在ssh&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ls -al ~/.ssh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;生成新的ssh并加入到ssh代理客户端&quot;&gt;&lt;a href=&quot;#生成新的ssh并加入到ssh代理客户端&quot; class=&quot;headerlink&quot; title=&quot;生成新的ssh并加入到ssh代理客户端&quot;&gt;&lt;/a&gt;生成新的ssh并加入到ssh代理客户端&lt;/h3&gt;&lt;h4 id=&quot;生成&quot;&gt;&lt;a href=&quot;#生成&quot; class=&quot;headerlink&quot; title=&quot;生成&quot;&gt;&lt;/a&gt;生成&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ssh-keygen -t rsa -b 4096 -C &lt;span class=&quot;string&quot;&gt;&quot;your_email@example.com&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h4 id=&quot;添加到代理客户端&quot;&gt;&lt;a href=&quot;#添加到代理客户端&quot; class=&quot;headerlink&quot; title=&quot;添加到代理客户端&quot;&gt;&lt;/a&gt;添加到代理客户端&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$(ssh-agent -s)&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;#后台启动代理客户端&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -53,14 +52,12 @@
 &lt;h3 id=&quot;添加到GitHub账户&quot;&gt;&lt;a href=&quot;#添加到GitHub账户&quot; class=&quot;headerlink&quot; title=&quot;添加到GitHub账户&quot;&gt;&lt;/a&gt;添加到GitHub账户&lt;/h3&gt;&lt;p&gt;在账户设置里添加。比如&lt;a href=&quot;https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub 账户&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;测试SSH连接性&quot;&gt;&lt;a href=&quot;#测试SSH连接性&quot; class=&quot;headerlink&quot; title=&quot;测试SSH连接性&quot;&gt;&lt;/a&gt;测试SSH连接性&lt;/h3&gt;&lt;p&gt;简洁版&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ssh -T git@github.com&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;详情版&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ssh -vT git@github.com&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h2 id=&quot;参考链接&quot;&gt;&lt;a href=&quot;#参考链接&quot; class=&quot;headerlink&quot; title=&quot;参考链接&quot;&gt;&lt;/a&gt;参考链接&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://help.github.com/categories/ssh/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub Help - SSH&lt;/a&gt;&lt;/p&gt;
-</content>
+&lt;h2 id=&quot;参考链接&quot;&gt;&lt;a href=&quot;#参考链接&quot; class=&quot;headerlink&quot; title=&quot;参考链接&quot;&gt;&lt;/a&gt;参考链接&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://help.github.com/categories/ssh/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub Help - SSH&lt;/a&gt;&lt;/p&gt;</content>
     
     <summary type="html">
     
       &lt;!-- toc --&gt;
 &lt;h2 id=&quot;ssh是啥&quot;&gt;&lt;a href=&quot;#ssh是啥&quot; class=&quot;headerlink&quot; title=&quot;ssh是啥&quot;&gt;&lt;/a&gt;ssh是啥&lt;/h2&gt;&lt;p&gt;ssh可以用来标识受信任的电脑，因此通讯时不再需要输入密码。&lt;/p&gt;
-&lt;h2 id=&quot;生成
     
     </summary>
     
@@ -78,10 +75,11 @@
     <link href="http://gagarinwjj.github.io/2015/05/12/%E7%89%A9%E8%81%94%E6%89%8B%E8%AE%B0/"/>
     <id>http://gagarinwjj.github.io/2015/05/12/物联手记/</id>
     <published>2015-05-12T09:37:36.000Z</published>
-    <updated>2016-06-17T10:36:34.000Z</updated>
+    <updated>2016-06-21T06:48:32.000Z</updated>
     
     <content type="html">&lt;!-- toc --&gt;
 &lt;h2 id=&quot;回顾&quot;&gt;&lt;a href=&quot;#回顾&quot; class=&quot;headerlink&quot; title=&quot;回顾&quot;&gt;&lt;/a&gt;回顾&lt;/h2&gt;&lt;p&gt;overridePendingTransition&lt;br&gt;android:scaleType&lt;br&gt;onBackPressed&lt;br&gt;启动模式&lt;br&gt;Activity生命周期&lt;br&gt;页面绘图生命周期&lt;br&gt;tabhost&lt;br&gt;actionbar&lt;br&gt;dialog&lt;br&gt;图片缓存&lt;br&gt;工具类封装&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;阅读模式&quot;&gt;&lt;a href=&quot;#阅读模式&quot; class=&quot;headerlink&quot; title=&quot;阅读模式&quot;&gt;&lt;/a&gt;阅读模式&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;秒读&lt;/code&gt; 信息快速定位，脑海中转瞬即逝的感觉&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;快读&lt;/code&gt; 只关注主谓宾，其他忽略&lt;/li&gt;
@@ -190,7 +188,7 @@ Intel Iris Pro Graphics 图形处理器和配备 2GB GDDR5 显存的 NVIDIA GeFo
     <summary type="html">
     
       &lt;!-- toc --&gt;
-&lt;h2 id=&quot;回顾&quot;&gt;&lt;a href=&quot;#回顾&quot; class=&quot;headerlink&quot; title=&quot;回顾&quot;&gt;&lt;/a&gt;回顾&lt;/h2&gt;&lt;p&gt;overridePendingTransition&lt;br&gt;android:scaleType&lt;br&gt;onBackP
+&lt;h2 id=&quot;回顾&quot;&gt;&lt;a href=&quot;#回顾&quot; class=&quot;headerlink&quot; title=&quot;回顾&quot;&gt;&lt;/a&gt;回顾&lt;/h2&gt;&lt;p&gt;overridePendingTransition&lt;br&gt;android:scaleType&lt;br&gt;onBackPressed&lt;br&gt;启动模式&lt;br&gt;Activity生命周期&lt;br&gt;页面绘图生命周期&lt;br&gt;tabhost&lt;br&gt;actionbar&lt;br&gt;dialog&lt;br&gt;图片缓存&lt;br&gt;工具类封装&lt;/p&gt;
     
     </summary>
     
@@ -202,7 +200,7 @@ Intel Iris Pro Graphics 图形处理器和配备 2GB GDDR5 显存的 NVIDIA GeFo
     <link href="http://gagarinwjj.github.io/2015/05/09/%E4%BC%98%E7%A7%80android%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6/"/>
     <id>http://gagarinwjj.github.io/2015/05/09/优秀android开源框架/</id>
     <published>2015-05-09T09:05:24.000Z</published>
-    <updated>2016-06-17T10:36:43.000Z</updated>
+    <updated>2016-06-17T10:45:32.000Z</updated>
     
     <content type="html">&lt;!-- toc --&gt;
 &lt;h1 id=&quot;Current-List-Utility&quot;&gt;&lt;a href=&quot;#Current-List-Utility&quot; class=&quot;headerlink&quot; title=&quot;Current List Utility&quot;&gt;&lt;/a&gt;Current List Utility&lt;/h1&gt;&lt;ul&gt;
@@ -219,6 +217,7 @@ Intel Iris Pro Graphics 图形处理器和配备 2GB GDDR5 显存的 NVIDIA GeFo
 &lt;li&gt;Droid@Screen &lt;a href=&quot;http://blog.ribomation.com/2010/01/droidscreen/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.ribomation.com/2010/01/droidscreen/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Memory Sucker &lt;a href=&quot;https://github.com/nollbit/memory-sucker&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/nollbit/memory-sucker&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h1 id=&quot;Persistence&quot;&gt;&lt;a href=&quot;#Persistence&quot; class=&quot;headerlink&quot; title=&quot;Persistence&quot;&gt;&lt;/a&gt;Persistence&lt;/h1&gt;&lt;h2 id=&quot;XML&quot;&gt;&lt;a href=&quot;#XML&quot; class=&quot;headerlink&quot; title=&quot;XML&quot;&gt;&lt;/a&gt;XML&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;Simple XML Serialization Library &lt;a href=&quot;http://simple.sourceforge.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://simple.sourceforge.net/&lt;/a&gt;&lt;br&gt;(with Android&lt;br&gt;Instructions&lt;a href=&quot;http://robertmassaioli.wordpress.com/2011/04/21/simple-xml-in-android…&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://robertmassaioli.wordpress.com/2011/04/21/simple-xml-in-android…&lt;/a&gt;&lt;br&gt;)&lt;h2 id=&quot;JSON&quot;&gt;&lt;a href=&quot;#JSON&quot; class=&quot;headerlink&quot; title=&quot;JSON&quot;&gt;&lt;/a&gt;JSON&lt;/h2&gt;&lt;/li&gt;
 &lt;li&gt;GSON JSON Serialization Library&lt;a href=&quot;http://code.google.com/p/google-gson/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://code.google.com/p/google-gson/&lt;/a&gt;&lt;br&gt;(with Android&lt;br&gt;Instructions&lt;a href=&quot;http://benjii.me/2010/04/deserializing-json-in-android-using-gson/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://benjii.me/2010/04/deserializing-json-in-android-using-gson/&lt;/a&gt;&lt;br&gt;)&lt;/li&gt;
@@ -307,7 +306,20 @@ Intel Iris Pro Graphics 图形处理器和配备 2GB GDDR5 显存的 NVIDIA GeFo
     <summary type="html">
     
       &lt;!-- toc --&gt;
-&lt;h1 id=&quot;Current-List-Utility&quot;&gt;&lt;a href=&quot;#Current-List-Utility&quot; class=&quot;headerlink&quot; title=&quot;Current List Utility&quot;&gt;&lt;/a&gt;Current List 
+&lt;h1 id=&quot;Current-List-Utility&quot;&gt;&lt;a href=&quot;#Current-List-Utility&quot; class=&quot;headerlink&quot; title=&quot;Current List Utility&quot;&gt;&lt;/a&gt;Current List Utility&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Droid-fu &lt;a href=&quot;http://github.com/kaeppler/droid-fu&quot;&gt;http://github.com/kaeppler/droid-fu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android-screenshot-library&lt;a href=&quot;http://code.google.com/p/android-screenshot-library/&quot;&gt;http://code.google.com/p/android-screenshot-library/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;android-alarm-database&lt;a href=&quot;http://code.google.com/p/android-alarm-database/&quot;&gt;http://code.google.com/p/android-alarm-database/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;OpenIntents &lt;a href=&quot;http://code.google.com/p/openintents/&quot;&gt;http://code.google.com/p/openintents/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ACRA &lt;a href=&quot;http://code.google.com/p/acra/&quot;&gt;http://code.google.com/p/acra/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;AndroidAnnotations &lt;a href=&quot;http://code.google.com/p/androidannotations/&quot;&gt;http://code.google.com/p/androidannotations/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;AndroidAsync &lt;a href=&quot;https://bitbucket.org/hal/android-async/wiki/Home&quot;&gt;https://bitbucket.org/hal/android-async/wiki/Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Roboguice &lt;a href=&quot;http://code.google.com/p/roboguice/&quot;&gt;http://code.google.com/p/roboguice/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The Missing Android XML Junit Test&lt;br&gt;Runner&lt;a href=&quot;http://code.google.com/p/the-missing-android-xml-junit-test-runner/&quot;&gt;http://code.google.com/p/the-missing-android-xml-junit-test-runner/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Maven Android Plugin &lt;a href=&quot;http://code.google.com/p/maven-android-plugin/&quot;&gt;http://code.google.com/p/maven-android-plugin/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Droid@Screen &lt;a href=&quot;http://blog.ribomation.com/2010/01/droidscreen/&quot;&gt;http://blog.ribomation.com/2010/01/droidscreen/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Memory Sucker &lt;a href=&quot;https://github.com/nollbit/memory-sucker&quot;&gt;https://github.com/nollbit/memory-sucker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -319,7 +331,7 @@ Intel Iris Pro Graphics 图形处理器和配备 2GB GDDR5 显存的 NVIDIA GeFo
     <link href="http://gagarinwjj.github.io/2015/05/09/hello-world/"/>
     <id>http://gagarinwjj.github.io/2015/05/09/hello-world/</id>
     <published>2015-05-09T07:03:24.000Z</published>
-    <updated>2016-06-16T10:05:59.000Z</updated>
+    <updated>2016-06-21T06:49:39.000Z</updated>
     
     <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;http://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;http://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;http://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;!-- toc --&gt;
