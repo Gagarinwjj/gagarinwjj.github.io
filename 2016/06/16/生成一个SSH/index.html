@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://gagarinwjj.github.io/2016/06/16/生成一个SSH/index.html">
 <meta property="og:site_name" content="凌晨风">
 <meta property="og:description" content="ssh是啥ssh可以用来标识受信任的电脑，因此通讯时不再需要输入密码。">
-<meta property="og:updated_time" content="2016-06-21T07:08:32.000Z">
+<meta property="og:updated_time" content="2016-06-21T07:21:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="生成一个SSH">
 <meta name="twitter:description" content="ssh是啥ssh可以用来标识受信任的电脑，因此通讯时不再需要输入密码。">
@@ -314,7 +314,9 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <!-- excerpt -->
+            <h1 id="table-of-contents">目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ssh是啥"><span class="toc-text">ssh是啥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成ssh"><span class="toc-text">生成ssh</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#检查是否已经存在ssh"><span class="toc-text">检查是否已经存在ssh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#生成新的ssh并加入到ssh代理客户端"><span class="toc-text">生成新的ssh并加入到ssh代理客户端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#生成"><span class="toc-text">生成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#添加到代理客户端"><span class="toc-text">添加到代理客户端</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加到GitHub账户"><span class="toc-text">添加到GitHub账户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试SSH连接性"><span class="toc-text">测试SSH连接性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考链接"><span class="toc-text">参考链接</span></a></li></ol>
+<h2 id="ssh是啥"><a href="#ssh是啥" class="headerlink" title="ssh是啥"></a>ssh是啥</h2><p>ssh可以用来标识受信任的电脑，因此通讯时不再需要输入密码。</p>
+<a id="more"></a>
 <h2 id="生成ssh"><a href="#生成ssh" class="headerlink" title="生成ssh"></a>生成ssh</h2><h3 id="检查是否已经存在ssh"><a href="#检查是否已经存在ssh" class="headerlink" title="检查是否已经存在ssh"></a>检查是否已经存在ssh</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
 <h3 id="生成新的ssh并加入到ssh代理客户端"><a href="#生成新的ssh并加入到ssh代理客户端" class="headerlink" title="生成新的ssh并加入到ssh代理客户端"></a>生成新的ssh并加入到ssh代理客户端</h3><h4 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">"your_email@example.com"</span></span><br></pre></td></tr></table></figure>
 <h4 id="添加到代理客户端"><a href="#添加到代理客户端" class="headerlink" title="添加到代理客户端"></a>添加到代理客户端</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">"<span class="variable">$(ssh-agent -s)</span>"</span> <span class="comment">#后台启动代理客户端</span></span><br></pre></td></tr></table></figure>
@@ -323,6 +325,7 @@
 <h3 id="测试SSH连接性"><a href="#测试SSH连接性" class="headerlink" title="测试SSH连接性"></a>测试SSH连接性</h3><p>简洁版<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
 <p>详情版<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -vT git@github.com</span><br></pre></td></tr></table></figure></p>
 <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="https://help.github.com/categories/ssh/" target="_blank" rel="external">GitHub Help - SSH</a></p>
+
             
         </div>
     </div>
@@ -386,7 +389,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#">
+                <a class="post-action-btn btn btn--default" href="#table-of-contents">
             
                 <i class="fa fa-list"></i>
             </a>
@@ -468,7 +471,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#">
+                <a class="post-action-btn btn btn--default" href="#table-of-contents">
             
                 <i class="fa fa-list"></i>
             </a>
