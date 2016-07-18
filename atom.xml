@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gagarinwjj.github.io/"/>
-  <updated>2016-07-18T09:14:57.000Z</updated>
+  <updated>2016-07-18T09:53:40.000Z</updated>
   <id>http://gagarinwjj.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://gagarinwjj.github.io/2016/07/18/Android%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E6%97%A5%E5%B8%B8%E7%A7%AF%E7%B4%AF/"/>
     <id>http://gagarinwjj.github.io/2016/07/18/Android开发中的日常积累/</id>
     <published>2016-07-18T09:00:24.000Z</published>
-    <updated>2016-07-18T09:14:57.000Z</updated>
+    <updated>2016-07-18T09:53:40.000Z</updated>
     
     <content type="html">&lt;!--toc--&gt;
 &lt;h3 id=&quot;Android-性能优化&quot;&gt;&lt;a href=&quot;#Android-性能优化&quot; class=&quot;headerlink&quot; title=&quot;Android 性能优化&quot;&gt;&lt;/a&gt;Android 性能优化&lt;/h3&gt;&lt;ul&gt;
@@ -381,6 +381,8 @@
     
     </summary>
     
+      <category term="Android" scheme="http://gagarinwjj.github.io/categories/Android/"/>
+    
     
       <category term="Android" scheme="http://gagarinwjj.github.io/tags/Android/"/>
     
@@ -618,7 +620,7 @@ Intel Iris Pro Graphics 图形处理器和配备 2GB GDDR5 显存的 NVIDIA GeFo
     <link href="http://gagarinwjj.github.io/2015/05/09/%E4%BC%98%E7%A7%80android%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6/"/>
     <id>http://gagarinwjj.github.io/2015/05/09/优秀android开源框架/</id>
     <published>2015-05-09T09:05:24.000Z</published>
-    <updated>2016-07-18T09:41:42.000Z</updated>
+    <updated>2016-07-18T09:53:22.000Z</updated>
     
     <content type="html">&lt;!-- toc --&gt;
 &lt;h1 id=&quot;Current-List-Utility&quot;&gt;&lt;a href=&quot;#Current-List-Utility&quot; class=&quot;headerlink&quot; title=&quot;Current List Utility&quot;&gt;&lt;/a&gt;Current List Utility&lt;/h1&gt;&lt;ul&gt;
@@ -741,6 +743,12 @@ Intel Iris Pro Graphics 图形处理器和配备 2GB GDDR5 显存的 NVIDIA GeFo
     
     </summary>
     
+      <category term="Android" scheme="http://gagarinwjj.github.io/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://gagarinwjj.github.io/tags/Android/"/>
+    
+      <category term="OpenSource" scheme="http://gagarinwjj.github.io/tags/OpenSource/"/>
     
   </entry>
   
