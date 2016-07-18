@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gagarinwjj.github.io/"/>
-  <updated>2016-06-28T08:38:23.000Z</updated>
+  <updated>2016-07-18T09:14:57.000Z</updated>
   <id>http://gagarinwjj.github.io/</id>
   
   <author>
@@ -16,11 +16,382 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Android开发中的日常积累</title>
+    <link href="http://gagarinwjj.github.io/2016/07/18/Android%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E6%97%A5%E5%B8%B8%E7%A7%AF%E7%B4%AF/"/>
+    <id>http://gagarinwjj.github.io/2016/07/18/Android开发中的日常积累/</id>
+    <published>2016-07-18T09:00:24.000Z</published>
+    <updated>2016-07-18T09:14:57.000Z</updated>
+    
+    <content type="html">&lt;!--toc--&gt;
+&lt;h3 id=&quot;Android-性能优化&quot;&gt;&lt;a href=&quot;#Android-性能优化&quot; class=&quot;headerlink&quot; title=&quot;Android 性能优化&quot;&gt;&lt;/a&gt;Android 性能优化&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Juude/awesome-android-performance&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android性能优化视频，文档以及工具&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://hukai.me/blog/archives/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;胡凯-性能优化&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/guolin_blog/article/details/42238627&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android最佳性能实践(1)：合理管理内存&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/guolin_blog/article/details/42238633&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android最佳性能实践(2)：分析内存的使用情况&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/guolin_blog/article/details/42318689&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android最佳性能实践(3)：高性能编码优化&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/guolin_blog/article/details/43376527&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android最佳性能实践(4)：布局优化技巧&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/moduth/blockcanary&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;blockcanary-轻松找出Android App界面卡顿元凶&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Android-Hybrid-技术&quot;&gt;&lt;a href=&quot;#Android-Hybrid-技术&quot; class=&quot;headerlink&quot; title=&quot;Android Hybrid 技术&quot;&gt;&lt;/a&gt;Android Hybrid 技术&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/yexiaochai/p/4921635.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;浅谈Hybrid技术的设计与实现&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://bxbxbai.gitcafe.io/2015/08/16/talk-about-bybird-app/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;谈谈App混合开发&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.pedant.cn/2014/07/04/webview-js-java-interface-research/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;在WebView中如何让JS与Java安全地互相调用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://drops.wooyun.org/papers/548&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WebView中接口隐患与手机挂马利用&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;React-Native-与-Weex-专题&quot;&gt;&lt;a href=&quot;#React-Native-与-Weex-专题&quot; class=&quot;headerlink&quot; title=&quot;React Native 与 Weex 专题&quot;&gt;&lt;/a&gt;React Native 与 Weex 专题&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://alibaba.github.io/weex/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;weex&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000004586390&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;深入源码探索 ReactNative 通信机制&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000004743424&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;React Native首屏白屏优化&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.lcode.org/react-native/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;React Native专题系列文章更新ing(涉及基础,组件,进阶以及开源项目)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://richard-cao.github.io/2015/12/03/React-native-Android-热更新/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;React-native-Android-热更新&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ele828/react-native-guide&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;React-Native学习指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://facebook.github.io/react-native/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Facebook的react-native&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.liaohuqiu.net/cn/posts/react-native-1/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;React Native: 配置和起步&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.liaohuqiu.net/cn/posts/react-native-android-package/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;React Native: Android 的打包&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/847a54e0c385&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;React Native For Android初体验&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/w4lle/JianDan-React-Native&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JianDan-React-Native&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI1MTA1MzM2Nw==&amp;amp;mid=207782506&amp;amp;idx=1&amp;amp;sn=3ff6b03c0d59fbda406f64739d9272cf&amp;amp;scene=1&amp;amp;srcid=1009Q3qo6mLeT2ydjdzUwLQ7&amp;amp;from=groupmessage&amp;amp;isappinstalled=0#rd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;React Native For Android 架构初探&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/race604/react-native-viewpager&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;react-native-viewpager&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.race604.com/react-native-android-practice/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;React Native for Android 实践 – 实现知乎日报客户端&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Android插件化开发与动态加载&quot;&gt;&lt;a href=&quot;#Android插件化开发与动态加载&quot; class=&quot;headerlink&quot; title=&quot;Android插件化开发与动态加载&quot;&gt;&lt;/a&gt;Android插件化开发与动态加载&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/bunnyblue/ACDD&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;OpenAtlas，已改名为ACDD，可以在手机淘宝中见到踪影&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Qihoo360/DroidPlugin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;360的DroidPlugin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/singwhatiwanna/dynamic-load-apk&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;dynamic-load-apk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/CtripMobile/DynamicAPK&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;携程DynamicAPK&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://tech.meituan.com/mt-android-auto-split-dex.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;美团分包&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ==&amp;amp;mid=207151651&amp;amp;idx=1&amp;amp;sn=9eab282711f4eb2b4daf2fbae5a5ca9a&amp;amp;3rd=MzA3MDU4NTYzMw==&amp;amp;scene=6#rd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;微信/手Q加载方案&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/wequick/Small&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Small&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.androidblog.cn/index.php/Index/detail/id/16&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android博客周刊专题之《插件化开发》&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/asLody/TurboDex&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Fast load dex in memory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/limpoxe/Android-Plugin-Framework&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android Plugin Framework 插件开发框架及示例程序，原理介绍等&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Android-热更新&quot;&gt;&lt;a href=&quot;#Android-热更新&quot; class=&quot;headerlink&quot; title=&quot;Android 热更新&quot;&gt;&lt;/a&gt;Android 热更新&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/alibaba/dexposed&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;dexposed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/alibaba/AndFix&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AndFix&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI1MTA1MzM2Nw==&amp;amp;mid=400118620&amp;amp;idx=1&amp;amp;sn=b4fdd5055731290eef12ad0d17f39d4a&amp;amp;scene=0#wechat_redirect&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;QQ空间热修复&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dodola/HotFix&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;QQ空间热修复实现方案&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/jasonross/Nuwa&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Nuwa 女娲&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Android-加固与反编译&quot;&gt;&lt;a href=&quot;#Android-加固与反编译&quot; class=&quot;headerlink&quot; title=&quot;Android 加固与反编译&quot;&gt;&lt;/a&gt;Android 加固与反编译&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Juude/droidReverse&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;android反编译工具的合集&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://ibotpeaches.github.io/Apktool/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Apktool&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://sourceforge.net/projects/dex2jar/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;dex2jar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/MasonLiuChn/DecompileApk&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DecompileApk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/856bf5b437aa&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android APK加固技术方案调研&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/joker535/Baffle&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android apk包res 资源混淆工具&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/shwenzhang/AndResGuard&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;微信资源混淆&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://tech.meituan.com/mt-android-resource-obfuscation.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;美团Android资源混淆保护实践&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Android-Studio专题&quot;&gt;&lt;a href=&quot;#Android-Studio专题&quot; class=&quot;headerlink&quot; title=&quot;Android Studio专题&quot;&gt;&lt;/a&gt;Android Studio专题&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/rholder/gradle-view&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;查看依赖关系的插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000004229002&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Gradle for Android&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/judasn/IntelliJ-IDEA-Tutorial&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;IntelliJ IDEA 简体中文专题教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://tianweishu.com/2015/12/21/android-studio-debug-tips-you-may-not-know/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android Studio 你不知道的调试技巧&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jayfeng.com/2015/11/07/Android%E6%89%93%E5%8C%85%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android打包的那些事&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://google.github.io/android-gradle-dsl/current/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;谷歌Gradle官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/keyboardsurfer/idea-live-templates&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;idea-live-templates 模板&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/KeepSafe/dexcount-gradle-plugin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;方法数统计插件，可用于统计是否达到65536个方法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/winterDroid/android-drawable-importer-intellij-plugin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android-Drawable-Importer插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/zzz40500/GsonFormat&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GsonFormat Json对应的Bean快速生成插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/inmite/android-selector-chapek&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;android-selector-chapek Selector生成插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/avast/android-butterknife-zelezny&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;快速生成butterknife注解插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/konifar/android-material-design-icon-generator-plugin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;android-material-design-icon-generator图标插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/evant/gradle-retrolambda&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Retrolambda 在java 6 7中使用 lambda表达式插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ligi/GradleDependenciesHelperPlugin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Gradle依赖自动补齐插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/nicoulaj/idea-markdown&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;idea-markdown编辑器插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Haehnchen/idea-android-studio-plugin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;从布局中生成View的声明插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.codota.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;codota代码片段搜索，支持Chrome和Android Studio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dmytrodanylyk/folding-plugin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;布局文件分组插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/JerzyPuchalski/Android-DPI-Calculator&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DPI计算插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/msdx/gradle-publish&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;gradle-publish 发布库插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/andforce/release-android-lib-to-jcenter&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;发布lib到jcenter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/vysor-beta/gidgenkbbabolejbgbpnhbimgjbffefm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;vysor 这个是Chrome的插件，电脑操作手机&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.developerphil.com/android-studio-tips-tricks-moving-around/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;android-studio-tips-tricks-moving-around/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.developerphil.com/android-studio-tips-of-the-day-roundup-1/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.developerphil.com/android-studio-tips-of-the-day-roundup-1/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.developerphil.com/android-studio-tips-of-the-day-roundup-2/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.developerphil.com/android-studio-tips-of-the-day-roundup-2/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.developerphil.com/android-studio-tips-of-the-day-roundup-3/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.developerphil.com/android-studio-tips-of-the-day-roundup-3/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.developerphil.com/android-studio-tips-of-the-day-roundup-4/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.developerphil.com/android-studio-tips-of-the-day-roundup-4/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.developerphil.com/android-studio-tips-of-the-day-roundup-5/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.developerphil.com/android-studio-tips-of-the-day-roundup-5/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.developerphil.com/android-studio-tips-of-the-day-roundup-6/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.developerphil.com/android-studio-tips-of-the-day-roundup-6/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jiajixin.cn/2015/10/11/android-studio-plugin-dev/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android Studio插件开发&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jiajixin.cn/2015/10/11/android-sdk-mirror/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android SDK镜像服务器搭建&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;RxJava与RxAndroid学习资源&quot;&gt;&lt;a href=&quot;#RxJava与RxAndroid学习资源&quot; class=&quot;headerlink&quot; title=&quot;RxJava与RxAndroid学习资源&quot;&gt;&lt;/a&gt;RxJava与RxAndroid学习资源&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/KeepSafe/ReLinker&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ReLinker 安全加载so库的方式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ReactiveX/RxJava/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RxJava Github地址&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ReactiveX/RxAndroid&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RxAndroid Github地址&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mcxiaoke/RxDocs&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RxJava中文文档翻译&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/lzyzsd/Awesome-RxJava&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Awesome-RxJava&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/72911b9ba2d7&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;在正确的线程上观察&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://gank.io/post/560e15be2dca930e00da1083&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;给 Android 开发者的 RxJava 详解&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000004049490&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;谜之RxJava （一） —— 最基本的观察者模式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000004049841&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;谜之RxJava （二） —— Magic Lift&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000004051191&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;迷之RxJava （三）—— 线程切换&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000004855661&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;迷之RxJava （三）update —— 线程切换（二）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000004856071&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;迷之RxJava （三）update 2 —— subscribeOn 和 observeOn 的区别&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000004077117&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;迷之RxJava（四）—— Retrofit和RxJava的基情&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Android-开发中值得看的优秀内容和工具&quot;&gt;&lt;a href=&quot;#Android-开发中值得看的优秀内容和工具&quot; class=&quot;headerlink&quot; title=&quot;Android 开发中值得看的优秀内容和工具&quot;&gt;&lt;/a&gt;Android 开发中值得看的优秀内容和工具&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/CameloeAnthony/AndroidArchitectureCollection/blob/master/README.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;安卓架构文章合集（a collection of android Architecture）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.eyrefree.org/2016/03/23/2016-03-23-Hexo-Coding-Pages/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;OS X 下使用 Hexo 和 Coding Pages 搭建静态博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://androidxref.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android系统源码查看，支持在线跟踪引用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jiajixin.cn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;贾吉鑫&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://wangxinghe.me/blog/2016-02-25/android-tools-traceview/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;TraceView性能优化工具使用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/facebook/network-connection-class&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;network-connection-class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/amfe/article&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;阿里巴巴技术文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jayfeng.com/2015/11/07/Android%E6%89%93%E5%8C%85%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android打包的那些事&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.infoq.com/cn/android-weekly/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;InfoQAndroid周报&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.devtf.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;开发技术前线&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://tech.meituan.com/mt-android-auto-split-dex.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;美团Android DEX自动拆包及动态加载简介&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/kesenhoo/android-training-course-in-chinese&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android官方培训课程中文版&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/bboyfeiyu/android-tech-frontier&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;一个定期翻译国外Android优质的技术、开源库、软件架构设计、测试等文章的开源项目&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/codepath/android_guides&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android Guides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/android-cn/android-open-project-analysis&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 开源项目源码解析&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://chiuki.github.io/android-shaders-filters&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 图像处理教学&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Trinea/android-open-project&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 开源项目分类汇总&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/simple-android-framework-exchange/the-fucking-traps-in-android-dev&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;开发过程中遇到的坑&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/aosp-exchange-group/share&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 开源交流&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/simple-android-framework-exchange/simple-android-opensource-framework&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 著名开源库的简版实现&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/android-cn/android-discuss&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 问题交流讨论，大部分是面试题&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/simple-android-framework-exchange/android_design_patterns_analysis&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;android 设计模式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/android-cn/android-jobs&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 全国职位列表&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/aosp-exchange-group/fuck-2014-flirt-2015&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;fuck-2014-flirt-2015&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.androiddevtools.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AndroidDevTools开发相关资料下载&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/futurice/android-best-practices&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;android-best-practices最佳实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/iluwatar/java-design-patterns&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;java设计模式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/tianzhijiexian/Android-Best-Practices&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android最佳实践示例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://droidyue.com/blog/2014/09/20/interaction-between-java-and-javascript-in-android/?comefrom=http://blogread.cn/news/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 中 Java 与JavaScript 交互最详尽的总结&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0824/3356.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;如何为drawable着色&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.race604.com/tint-drawable/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Drawable 着色的后向兼容方案&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/lightSky/Awesome-MaterialDesign&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Awesome-MaterialDesign&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/lizhangqu/InterviewQuestion&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 面试题InterviewQuestion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/JStumpp/awesome-android&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;awesome-android&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://futurestud.io/blog/retrofit-getting-started-and-android-client/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Retrofit相关文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://litesuits.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Lite Android&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://bugly.qq.com/blog/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Bugly Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://gold.xitu.io/#/tag/Android&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;掘金&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Android-开源软件&quot;&gt;&lt;a href=&quot;#Android-开源软件&quot; class=&quot;headerlink&quot; title=&quot;Android 开源软件&quot;&gt;&lt;/a&gt;Android 开源软件&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/wangdan/AisenWeiBo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;一个第三方开源微博&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/openproject/AndroidDigest&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;android相关的干货(文摘，名博，github等等)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Leaking/WeGit&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第三方github客户端&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://git.oschina.net/oschina/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;开源中国的系列软件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Jhuster/EWeightScale&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;体重档案&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://skillcollege.github.io/SimplifyReader/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Simplifyreader&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/lzjun567/XiYuanFangApp&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;西源坊&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Android-开发辅助工具&quot;&gt;&lt;a href=&quot;#Android-开发辅助工具&quot; class=&quot;headerlink&quot; title=&quot;Android 开发辅助工具&quot;&gt;&lt;/a&gt;Android 开发辅助工具&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://apps.evozi.com/apk-downloader/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Google Play APK下载器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.slideshare.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;slideshare&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.codota.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;codota代码片段搜索，支持Chrome和Android Studio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/vysor-beta/gidgenkbbabolejbgbpnhbimgjbffefm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;vysor 这个是Chrome的插件，电脑操作手机&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/buunguyen/octotree&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Browser extension to display GitHub code in tree format&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://laod.cn/hosts/2015-google-hosts.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;google hosts翻墙，有vpn的忽略&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://tool.oschina.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;开源中国在线工具&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://apistore.baidu.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;百度ApiStore&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/vim-scripts/Auto-Pairs&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Vim插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/macdao/ocds-guide-to-setting-up-mac&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;强迫症的 Mac 设置指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/judasn/Linux-Tutorial&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Linux-Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/judasn/Markdown-Syntax-CN&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown-Syntax-CN&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Android-推送（含IM）&quot;&gt;&lt;a href=&quot;#Android-推送（含IM）&quot; class=&quot;headerlink&quot; title=&quot;Android 推送（含IM）&quot;&gt;&lt;/a&gt;Android 推送（含IM）&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.easemob.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;环信，支持即时音视频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.qcloud.com/product/avc.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;腾讯云通讯，支持即时音视频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.jpush.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;极光推送和IM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.getui.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;个推&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://dev.xiaomi.com/doc/?page_id=1670&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;小米推送，在MIUI上属于系统服务框架，共享系统级长连接&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://push.baidu.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;百度云推送,部分机型收不到推送，如小米，Bug是否修复未知&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://xg.qq.com/xg/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;腾讯信鸽推送&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.umeng.com/push&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;友盟推送&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://leancloud.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;leancloud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.bmob.cn/products&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;bmob云推送，含IM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mogujie/TeamTalk&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;蘑菇街TeamTalk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.igniterealtime.org/downloads/index.jsp&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Openfire+Smack开源Xmpp解决方案&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Android后端等服务&quot;&gt;&lt;a href=&quot;#Android后端等服务&quot; class=&quot;headerlink&quot; title=&quot;Android后端等服务&quot;&gt;&lt;/a&gt;Android后端等服务&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://parse.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;parse，缺点是服务器在国外，速度慢&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://leancloud.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;leancloud，国内的，仿parse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.bmob.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Bmob后端云&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.qiniu.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;七牛云存储&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.apicloud.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;apicloud&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Android-应用内测平台&quot;&gt;&lt;a href=&quot;#Android-应用内测平台&quot; class=&quot;headerlink&quot; title=&quot;Android 应用内测平台&quot;&gt;&lt;/a&gt;Android 应用内测平台&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.pgyer.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;蒲公英，内测应用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://fir.im/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Fir.im，内测应用&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Android社会化分享，短信验证，意见反馈，支付等相关&quot;&gt;&lt;a href=&quot;#Android社会化分享，短信验证，意见反馈，支付等相关&quot; class=&quot;headerlink&quot; title=&quot;Android社会化分享，短信验证，意见反馈，支付等相关&quot;&gt;&lt;/a&gt;Android社会化分享，短信验证，意见反馈，支付等相关&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.umeng.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;友盟,社会化分析，意见反馈&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mob.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Sharesdk，社会化分析&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://pingxx.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Ping++，支付&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://docs.bmob.cn/androidpay/index.html?menukey=fast_start&amp;amp;key=start_android_pay&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;bmob支付，Bmob为广大开发人员提供的统一、正规的收费手段，让没有企业认证的个人开发者，也能通过支付宝和微信向用户收费&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.yuntongxun.com/ability/toPriceTariff&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;容联云通讯&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;安卓网络层-包含图片&quot;&gt;&lt;a href=&quot;#安卓网络层-包含图片&quot; class=&quot;headerlink&quot; title=&quot;安卓网络层(包含图片)&quot;&gt;&lt;/a&gt;安卓网络层(包含图片)&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/square/okhttp&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;okhttp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/square/retrofit&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;retrofit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://square.github.io/picasso/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;picasso&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://android.googlesource.com/platform/frameworks/volley&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Volley&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/facebook/fresco&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;fresco&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/nostra13/Android-Universal-Image-Loader&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android-Universal-Image-Loader&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stephanenicolas/robospice&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;robospice&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://loopj.com/android-async-http/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;android-async-http&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;安卓orm框架，用得比较多的就GreenDao，Ormlite&quot;&gt;&lt;a href=&quot;#安卓orm框架，用得比较多的就GreenDao，Ormlite&quot; class=&quot;headerlink&quot; title=&quot;安卓orm框架，用得比较多的就GreenDao，Ormlite&quot;&gt;&lt;/a&gt;安卓orm框架，用得比较多的就GreenDao，Ormlite&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://greendao-orm.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;greenDAO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://ormlite.com/sqlite_java_android_orm.shtml&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ORMLite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/pardom/ActiveAndroid/wiki/Getting-started&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ActiveAndroid&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://satyan.github.io/sugar/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SugarORM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://siminov.github.io/android-orm/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Siminov&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.androrm.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;androrm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://bitbucket.org/qbusict/cupboard/wiki/GettingStarted&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;cupboard&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;安卓Json解析&quot;&gt;&lt;a href=&quot;#安卓Json解析&quot; class=&quot;headerlink&quot; title=&quot;安卓Json解析&quot;&gt;&lt;/a&gt;安卓Json解析&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/google/gson&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Gson,用法简单，速度慢&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/alibaba/fastjson&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;fastjson，号称最快&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/FasterXML/jackson&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jackson&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;安卓开发值得关注的库&quot;&gt;&lt;a href=&quot;#安卓开发值得关注的库&quot; class=&quot;headerlink&quot; title=&quot;安卓开发值得关注的库&quot;&gt;&lt;/a&gt;安卓开发值得关注的库&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mthli/SugarTask&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SugarTask&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/taoliuh/v2ex&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;sync adapter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/badoo/android-weak-handler&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android Weak Handler防止内存泄露&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/path/android-priority-jobqueue&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android Priority Job Queue 异步任务调度&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/H07000223/FlycoDialog_Master&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android对话框&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/tianzhijiexian/ExRecyclerView/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;扩展的RecyclerView，拥有添加头、底等多种操作&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/lightSky/Awesome-MaterialDesign&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MaterialDesign相关库&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ikew0ng/SwipeBackLayout&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;右滑返回SwipeBackLayout&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/JulienGenoud/android-percent-support-lib-sample&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;百分比布局&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/greenrobot/EventBus&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;EventBus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ksoichiro/Android-ObservableScrollView/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ObservableScrollView&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/openproject/LessCode&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;工具库less code, more efficient for android&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/JoanZapata/base-adapter-helper&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;通用适配器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/SnowdreamFramework/android-log&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;android-log&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://nineoldandroids.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;NineOldAndroids&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/jgilfelt/android-viewbadger&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;BadgeView &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/hdodenhof/CircleImageView&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CircleImageView&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/MostafaGazar/CustomShapeImageView&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CustomShapeImageView&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/pedant/sweet-alert-dialog&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SweetAlert for Android, a beautiful and clever alert dialog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/johannilsson/android-pulltorefresh&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;android-pulltorefresh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/jfeinstein10/SlidingMenu&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SlidingMenu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/JakeWharton/ViewPagerIndicator&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ViewPagerIndicator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/daimajia/AndroidViewAnimations&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;一个动画集合库&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/JoanZapata/android-iconify&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;FontAwesome for Android&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/lucasr/twoway-view&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RecyclerView made simple&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jsoup.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jsoup库(java)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/maarek/android-wheel&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;android-wheel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/wyouflf/xUtils&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;xUtils&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Trinea/android-common&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;android-common&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/zxing/zxing&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;zxing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/wangjiegulu/AndroidBucket&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android开发常用整理&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ZhaoKaiQiang/ParticleLayout&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;左滑粒子删除效果&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/typicode/json-server&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JSON Server：零编码快速“伪造” REST API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/owncloud/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;owncloud&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;安卓资源相关&quot;&gt;&lt;a href=&quot;#安卓资源相关&quot; class=&quot;headerlink&quot; title=&quot;安卓资源相关&quot;&gt;&lt;/a&gt;安卓资源相关&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://androiddrawables.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;安卓每个版本的Drawable图标&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/liltof/font-awsome-for-android&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;FontAwesome字体图标安卓字符串&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.google.com/design/spec/style/color.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;色系&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/MatthewYork/Colours&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;颜色库&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.iconfinder.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;IconFinder图标资源&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.iconfont.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;阿里巴巴矢量图&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://icomoon.io/app/#/select&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;icomoon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://romannurik.github.io/AndroidAssetStudio/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AndroidAssetStudio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://android-holo-colors.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android Holo颜色生成器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jgilfelt.github.io/android-actionbarstylegenerator/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android Action Bar Style Generator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://romannurik.github.io/AndroidAssetStudio/nine-patches.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;在线.9.png图片生成器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://angrytools.com/android/button/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;安卓button在线制作工具&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://omapzoom.org/?p=platform/frameworks/base.git;a=blob;f=core/res/res/values/themes.xml;hb=master&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Theme.xml属性&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.parse.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;移动APP云计算平台Parse&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;git&quot;&gt;&lt;a href=&quot;#git&quot; class=&quot;headerlink&quot; title=&quot;git&quot;&gt;&lt;/a&gt;git&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Git教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://segmentfault.com/a/1190000003836345?utm_source=Weibo&amp;amp;utm_medium=shareLink&amp;amp;utm_campaign=socialShare&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;用 Git Hooks 进行自动部署&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Android-NoSql&quot;&gt;&lt;a href=&quot;#Android-NoSql&quot; class=&quot;headerlink&quot; title=&quot;Android NoSql&quot;&gt;&lt;/a&gt;Android NoSql&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/realm/realm-java&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;realm-java&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/couchbase/couchbase-lite-android&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;couchbase-lite-android&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Jearil/SimpleNoSQL&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SimpleNoSQL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/nhachicha/SnappyDB/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SnappyDB&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;设计网站，可以寻找一些酷炫的设计稿&quot;&gt;&lt;a href=&quot;#设计网站，可以寻找一些酷炫的设计稿&quot; class=&quot;headerlink&quot; title=&quot;设计网站，可以寻找一些酷炫的设计稿&quot;&gt;&lt;/a&gt;设计网站，可以寻找一些酷炫的设计稿&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://dribbble.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://dribbble.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://pttrns.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://pttrns.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://capptivate.co/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://capptivate.co/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;国外个人博客&quot;&gt;&lt;a href=&quot;#国外个人博客&quot; class=&quot;headerlink&quot; title=&quot;国外个人博客&quot;&gt;&lt;/a&gt;国外个人博客&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://jakewharton.com/blog&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Jakewharton&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.curious-creature.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Romain Guy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://cyrilmottier.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Cyril Mottier&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.stylingandroid.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mark Allison&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.danlew.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Daniel Lew&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.androidhive.info/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Ravi Tamada&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://loseyourmarbles.co/about-me/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Chris Nash&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.androiduipatterns.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;juhani@fatrobot.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.grokkingandroid.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Wolfram Rittmeyer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://geekyouup.blogspot.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Rich Hyndman&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;国外的一些优秀网站&quot;&gt;&lt;a href=&quot;#国外的一些优秀网站&quot; class=&quot;headerlink&quot; title=&quot;国外的一些优秀网站&quot;&gt;&lt;/a&gt;国外的一些优秀网站&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://androidweekly.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;androidweekly.net&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://android-developers.blogspot.ca/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android Developers Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.vogella.com/tutorials/android.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;vogella&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.tutorialspoint.com/android/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;tutorialspoint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://code.tutsplus.com/categories/android-sdk&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;tutsplus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.coderzheaven.com/android-tutorials/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;oderzheaven&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://thenewcircle.com/training/android/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;thenewcircle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.coreservlets.com/android-tutorial/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;coreservlets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://droid-blog.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Droid-Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;coursera.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://commonsware.com/blog/archive.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;commonsware.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://android.amberfog.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://android.amberfog.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.anddev.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;anddev&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Ibeacon与蓝牙4-0相关&quot;&gt;&lt;a href=&quot;#Ibeacon与蓝牙4-0相关&quot; class=&quot;headerlink&quot; title=&quot;Ibeacon与蓝牙4.0相关&quot;&gt;&lt;/a&gt;Ibeacon与蓝牙4.0相关&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/AltBeacon/android-beacon-library&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;一个ibeacon交互库&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/AprilBrother/AprilBeacon-Android-SDK&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AprilBeacon-Android-sdk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Estimote/Android-SDK&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Estimote SDK&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/devunwired/accessory-samples&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;蓝牙4.0相关&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;WEB与前端相关&quot;&gt;&lt;a href=&quot;#WEB与前端相关&quot; class=&quot;headerlink&quot; title=&quot;WEB与前端相关&quot;&gt;&lt;/a&gt;WEB与前端相关&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.yiichina.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;yii&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://yiibooster.clevertech.biz/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;yiibooster&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dodgepudding/wechat-php-sdk&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;wechat-php-sdk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/acczefly/php_sae_storage&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;php_sae_storage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.bootcss.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Bootstrap&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/FortAwesome/Font-Awesome&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Font-Awesome字体图标&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/sindresorhus/sublime-autoprefixer&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;sublime浏览器前缀插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mattbryson/TouchSwipe-Jquery-Plugin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;一个手势库&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/markusslima/bootstrap-filestyle&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;bootstrap-filestyle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/znddzxx112/bitcms&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;基于Codeigniter的CMS系统&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;!--toc--&gt;
+&lt;h3 id=&quot;Android-性能优化&quot;&gt;&lt;a href=&quot;#Android-性能优化&quot; class=&quot;headerlink&quot; title=&quot;Android 性能优化&quot;&gt;&lt;/a&gt;Android 性能优化&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Juude/awesome-android-performance&quot;&gt;Android性能优化视频，文档以及工具&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://hukai.me/blog/archives/&quot;&gt;胡凯-性能优化&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/guolin_blog/article/details/42238627&quot;&gt;Android最佳性能实践(1)：合理管理内存&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/guolin_blog/article/details/42238633&quot;&gt;Android最佳性能实践(2)：分析内存的使用情况&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/guolin_blog/article/details/42318689&quot;&gt;Android最佳性能实践(3)：高性能编码优化&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/guolin_blog/article/details/43376527&quot;&gt;Android最佳性能实践(4)：布局优化技巧&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/moduth/blockcanary&quot;&gt;blockcanary-轻松找出Android App界面卡顿元凶&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://gagarinwjj.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
     <title>如何突破技术瓶颈</title>
     <link href="http://gagarinwjj.github.io/2016/06/28/%E5%A6%82%E4%BD%95%E7%AA%81%E7%A0%B4%E6%8A%80%E6%9C%AF%E7%93%B6%E9%A2%88/"/>
     <id>http://gagarinwjj.github.io/2016/06/28/如何突破技术瓶颈/</id>
     <published>2016-06-28T08:09:43.000Z</published>
-    <updated>2016-06-28T08:38:23.000Z</updated>
+    <updated>2016-06-28T08:44:13.000Z</updated>
     
     <content type="html">&lt;p&gt;无论做什么技术，积累到一定时候，都会发现“够用了”，到达了舒适区，也就会遇到技术上的瓶颈。&lt;br&gt;以下内容收集自网友的精辟点评。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;!--toc--&gt;&lt;/p&gt;
 &lt;h1 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h1&gt;&lt;p&gt;干了四五年Android开发了，感觉做App几乎没有什么技术门槛越来越像搭积木了，现在每天都特别烦恼和焦虑，感觉自己遇到了非常大的技术瓶颈了！而且做很多事情都很难获得成就感！想知道有小伙伴也和我一样遇到技术瓶颈期的么？你们都是如何解决的呢？补充，其实不仅仅是技术的瓶颈期，感觉工作，生活都处于这个状态之中！！&lt;/p&gt;
@@ -46,7 +417,7 @@
 &lt;p&gt;其实我也没更多建议的。能意识到自己的焦虑，并想办法去找解决方案，本身已经是一种进步，至于你要选择哪一种实践。那肯定你是集各家之言综合自身情况最优解。&lt;/p&gt;
 &lt;h1 id=&quot;解答3&quot;&gt;&lt;a href=&quot;#解答3&quot; class=&quot;headerlink&quot; title=&quot;解答3&quot;&gt;&lt;/a&gt;解答3&lt;/h1&gt;&lt;p&gt;隔了这么久再来看这个帖子，感慨挺深，想说说自己当下的状态。我在公司里面做Android开发差不多2年了，不能说100%完全体会到老前辈那种感觉的，但我自己也会有类似忧患感。有好多个日夜曾经都在想我在做的工作大致都是那几样，想往上再提升好像挺困难的，那我再过一两年怎么办啊？一生只能这样了么？经过很多次思考和整理，我自己是想一生都走开发的道路的，所以自己定了一个大的主线目标，就是成为T型开发者。&lt;/p&gt;
 &lt;p&gt;所谓T，就是一横一竖，横代表广度，竖是深度，我希望自己在Android开发这个领域能有深度，但是思维和见识不限制在Android上。因此，我会找一些框架去看代码，学习人家如何解决问题和优雅的写代码技巧，会去学习服务器方面相关的知识，拓宽一下自己平时搞开发时候的思考方式。这样带来的好处是，我能更好理解，为什么这些放在服务器完成比较好，这些应该客户端处理比较靠谱。以上是目前的一些想法，各位大牛觉得不妥，可以交流指点一下。&lt;/p&gt;
-&lt;h1 id=&quot;解答4&quot;&gt;&lt;a href=&quot;#解答4&quot; class=&quot;headerlink&quot; title=&quot;解答4&quot;&gt;&lt;/a&gt;解答4&lt;/h1&gt;&lt;p&gt;android 3年，也是楼主现在的感觉，经常容易焦虑，失眠，而且现在的年轻人顶着买房，买车，结婚的压力，技术更新也如此快，真的很容易焦虑，但是看过罗升阳的博客，基础的东西总是不变的，上层的思想总是基于底层和基础的东西来变化的，所以以前大学时老师说基础很重要，这个确实是真的，感到迷茫的时候就想出去走走，或许能改变一些想法和观念，总之人生会面对许多的考验，要做许多难做的选择，没有什么建议，只是说说自己的想法，人生没有过不去的槛，我们总能跨过去的，生活总会对你微笑的&lt;/p&gt;
+&lt;h1 id=&quot;解答4&quot;&gt;&lt;a href=&quot;#解答4&quot; class=&quot;headerlink&quot; title=&quot;解答4&quot;&gt;&lt;/a&gt;解答4&lt;/h1&gt;&lt;p&gt;android 3年，也是楼主现在的感觉，经常容易焦虑，失眠，而且现在的年轻人顶着买房，买车，结婚的压力，技术更新也如此快，真的很容易焦虑，但是看过罗升阳的博客，基础的东西总是不变的，上层的思想总是基于底层和基础的东西来变化的，所以以前大学时老师说基础很重要，这个确实是真的，感到迷茫的时候就想出去走走，或许能改变一些想法和观念，总之人生会面对许多的考验，要做许多难做的选择，没有什么建议，只是说说自己的想法，人生没有过不去的槛，我们总能跨过去的，生活总会对你微笑的。&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -65,7 +436,7 @@
     <link href="http://gagarinwjj.github.io/2016/06/17/%E6%B5%8B%E8%AF%95/"/>
     <id>http://gagarinwjj.github.io/2016/06/17/测试/</id>
     <published>2016-06-17T08:35:56.000Z</published>
-    <updated>2016-06-21T06:47:29.000Z</updated>
+    <updated>2016-06-28T08:40:40.000Z</updated>
     
     <content type="html">&lt;p&gt;这只是一个测试而已。&lt;/p&gt;
 </content>

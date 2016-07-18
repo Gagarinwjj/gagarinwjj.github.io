@@ -1,0 +1,918 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="凌晨风">
+    <title>Android开发中的日常积累 - 凌晨风</title>
+    <meta name="author" content="Gagarinwjj">
+    
+        <meta name="keywords" content="链接,工具,Android">
+    
+    
+        <link rel="icon" href="http://gagarinwjj.github.io/assets/images/favicon.ico">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="Android 性能优化
+Android性能优化视频，文档以及工具
+胡凯-性能优化
+Android最佳性能实践(1)：合理管理内存
+Android最佳性能实践(2)：分析内存的使用情况
+Android最佳性能实践(3)：高性能编码优化
+Android最佳性能实践(4)：布局优化技巧
+blockcanary-轻松找出Android App界面卡顿元凶">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Android开发中的日常积累">
+<meta property="og:url" content="http://gagarinwjj.github.io/2016/07/18/Android开发中的日常积累/index.html">
+<meta property="og:site_name" content="凌晨风">
+<meta property="og:description" content="Android 性能优化
+Android性能优化视频，文档以及工具
+胡凯-性能优化
+Android最佳性能实践(1)：合理管理内存
+Android最佳性能实践(2)：分析内存的使用情况
+Android最佳性能实践(3)：高性能编码优化
+Android最佳性能实践(4)：布局优化技巧
+blockcanary-轻松找出Android App界面卡顿元凶">
+<meta property="og:updated_time" content="2016-07-18T09:14:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android开发中的日常积累">
+<meta name="twitter:description" content="Android 性能优化
+Android性能优化视频，文档以及工具
+胡凯-性能优化
+Android最佳性能实践(1)：合理管理内存
+Android最佳性能实践(2)：分析内存的使用情况
+Android最佳性能实践(3)：高性能编码优化
+Android最佳性能实践(4)：布局优化技巧
+blockcanary-轻松找出Android App界面卡顿元凶">
+<meta name="twitter:creator" content="@gagarinwjj">
+    
+        <meta rel="publisher" content="https://plus.google.com/+gagarinwjj"/>
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://avatars0.githubusercontent.com/u/1587247?v=3&amp;s=460"/>
+    
+    
+        <meta property="og:image" content="http://gagarinwjj.github.io/2016/07/18/Android开发中的日常积累/android.jpeg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://gagarinwjj.github.io/2016/07/18/Android开发中的日常积累/android.jpeg" />
+    
+    
+        <meta property="og:image" content="http://gagarinwjj.github.io/2016/07/18/Android开发中的日常积累/top_bg.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://gagarinwjj.github.io/2016/07/18/Android开发中的日常积累/top_bg.jpg" />
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-nuvue6sithwirecbhvw3dkaobiojqvtadsnhguwi7k04xklybw5djl1smadp.min.css">
+    <!--STYLES END-->
+    
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-79640182-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    
+    <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?a8b6299e509c9d27ef98321671c24e79";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/ ">凌晨风</a>
+    </h1>
+    
+        
+            <a  class="header-right-icon st-search-show-outputs"
+                href="#search">
+        
+        
+            <i class="fa fa-lg fa-search"></i>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="4">
+    
+        <div class="sidebar-profile">
+            <a href="/#about">
+                    <img class="sidebar-profile-picture" src="https://avatars0.githubusercontent.com/u/1587247?v=3&amp;s=460"/>
+            </a>
+            <span class="sidebar-profile-name">Gagarinwjj</span>
+        </div>
+    
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/ "
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                    <span class="sidebar-button-desc">首页</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-categories"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                    <span class="sidebar-button-desc">所有分类</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-tags"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">所有标签</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-archives"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                    <span class="sidebar-button-desc">归档</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link st-search-show-outputs"
+                         href="#search"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                    <span class="sidebar-button-desc">搜索</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="#about"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                    <span class="sidebar-button-desc">关于</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://github.com/gagarinwjj" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                    <span class="sidebar-button-desc">GitHub</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="http://stackoverflow.com/users/6491765/gagarinwjj" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+                    <span class="sidebar-button-desc">Stack Overflow</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://twitter.com/wjjaly" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+                    <span class="sidebar-button-desc">Twitter</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://facebook.com/" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-facebook"></i>
+                    <span class="sidebar-button-desc">Facebook</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://plus.google.com/101509389715899394262" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-google-plus"></i>
+                    <span class="sidebar-button-desc">Google Plus</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://www.linkedin.com/in/佳佳-王-92354b123" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
+                    <span class="sidebar-button-desc">LinkedIn</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="mailto:gagarinwjj@gmail.com" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-envelope-o"></i>
+                    <span class="sidebar-button-desc">邮箱</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/atom.xml"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                    <span class="sidebar-button-desc">RSS</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+</nav>
+
+            
+        <div class="post-header-cover
+                    text-center
+                    post-header-cover--full"
+             style="background-image:url('/2016/07/18/Android开发中的日常积累/top_bg.jpg');"
+             data-behavior="4">
+            
+                <div class="post-header main-content-wrap text-center">
+    
+        <h1 class="post-title" itemprop="headline">
+            Android开发中的日常积累
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" datetime="2016-07-18T17:00:24+08:00">
+	
+		    7月 18, 2016
+    	
+    </time>
+    
+</div>
+
+</div>
+            
+        </div>
+
+            <div id="main" data-behavior="4"
+                 class="hasCover
+                        hasCoverMetaIn
+                        hasCoverCaption">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+        <span class="post-header-cover-caption caption">Android开发优秀资料整理</span>
+    
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <h1 id="table-of-contents">目录</h1><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-性能优化"><span class="toc-text">Android 性能优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-Hybrid-技术"><span class="toc-text">Android Hybrid 技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#React-Native-与-Weex-专题"><span class="toc-text">React Native 与 Weex 专题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android插件化开发与动态加载"><span class="toc-text">Android插件化开发与动态加载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-热更新"><span class="toc-text">Android 热更新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-加固与反编译"><span class="toc-text">Android 加固与反编译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-Studio专题"><span class="toc-text">Android Studio专题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RxJava与RxAndroid学习资源"><span class="toc-text">RxJava与RxAndroid学习资源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-开发中值得看的优秀内容和工具"><span class="toc-text">Android 开发中值得看的优秀内容和工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-开源软件"><span class="toc-text">Android 开源软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-开发辅助工具"><span class="toc-text">Android 开发辅助工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-推送（含IM）"><span class="toc-text">Android 推送（含IM）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android后端等服务"><span class="toc-text">Android后端等服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-应用内测平台"><span class="toc-text">Android 应用内测平台</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android社会化分享，短信验证，意见反馈，支付等相关"><span class="toc-text">Android社会化分享，短信验证，意见反馈，支付等相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安卓网络层-包含图片"><span class="toc-text">安卓网络层(包含图片)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安卓orm框架，用得比较多的就GreenDao，Ormlite"><span class="toc-text">安卓orm框架，用得比较多的就GreenDao，Ormlite</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安卓Json解析"><span class="toc-text">安卓Json解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安卓开发值得关注的库"><span class="toc-text">安卓开发值得关注的库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安卓资源相关"><span class="toc-text">安卓资源相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git"><span class="toc-text">git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-NoSql"><span class="toc-text">Android NoSql</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设计网站，可以寻找一些酷炫的设计稿"><span class="toc-text">设计网站，可以寻找一些酷炫的设计稿</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#国外个人博客"><span class="toc-text">国外个人博客</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#国外的一些优秀网站"><span class="toc-text">国外的一些优秀网站</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ibeacon与蓝牙4-0相关"><span class="toc-text">Ibeacon与蓝牙4.0相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WEB与前端相关"><span class="toc-text">WEB与前端相关</span></a></li></ol>
+<h3 id="Android-性能优化"><a href="#Android-性能优化" class="headerlink" title="Android 性能优化"></a>Android 性能优化</h3><ul>
+<li><a href="https://github.com/Juude/awesome-android-performance" target="_blank" rel="external">Android性能优化视频，文档以及工具</a></li>
+<li><a href="http://hukai.me/blog/archives/" target="_blank" rel="external">胡凯-性能优化</a></li>
+<li><a href="http://blog.csdn.net/guolin_blog/article/details/42238627" target="_blank" rel="external">Android最佳性能实践(1)：合理管理内存</a></li>
+<li><a href="http://blog.csdn.net/guolin_blog/article/details/42238633" target="_blank" rel="external">Android最佳性能实践(2)：分析内存的使用情况</a></li>
+<li><a href="http://blog.csdn.net/guolin_blog/article/details/42318689" target="_blank" rel="external">Android最佳性能实践(3)：高性能编码优化</a></li>
+<li><a href="http://blog.csdn.net/guolin_blog/article/details/43376527" target="_blank" rel="external">Android最佳性能实践(4)：布局优化技巧</a></li>
+<li><p><a href="https://github.com/moduth/blockcanary" target="_blank" rel="external">blockcanary-轻松找出Android App界面卡顿元凶</a></p>
+<a id="more"></a>
+</li>
+</ul>
+<h3 id="Android-Hybrid-技术"><a href="#Android-Hybrid-技术" class="headerlink" title="Android Hybrid 技术"></a>Android Hybrid 技术</h3><ul>
+<li><a href="http://www.cnblogs.com/yexiaochai/p/4921635.html" target="_blank" rel="external">浅谈Hybrid技术的设计与实现</a></li>
+<li><a href="http://bxbxbai.gitcafe.io/2015/08/16/talk-about-bybird-app/" target="_blank" rel="external">谈谈App混合开发</a></li>
+<li><a href="http://www.pedant.cn/2014/07/04/webview-js-java-interface-research/" target="_blank" rel="external">在WebView中如何让JS与Java安全地互相调用</a></li>
+<li><a href="http://drops.wooyun.org/papers/548" target="_blank" rel="external">WebView中接口隐患与手机挂马利用</a></li>
+</ul>
+<h3 id="React-Native-与-Weex-专题"><a href="#React-Native-与-Weex-专题" class="headerlink" title="React Native 与 Weex 专题"></a>React Native 与 Weex 专题</h3><ul>
+<li><a href="http://alibaba.github.io/weex/" target="_blank" rel="external">weex</a></li>
+<li><a href="https://segmentfault.com/a/1190000004586390" target="_blank" rel="external">深入源码探索 ReactNative 通信机制</a></li>
+<li><a href="https://segmentfault.com/a/1190000004743424" target="_blank" rel="external">React Native首屏白屏优化</a></li>
+<li><a href="http://www.lcode.org/react-native/" target="_blank" rel="external">React Native专题系列文章更新ing(涉及基础,组件,进阶以及开源项目)</a></li>
+<li><a href="http://richard-cao.github.io/2015/12/03/React-native-Android-热更新/" target="_blank" rel="external">React-native-Android-热更新</a></li>
+<li><a href="https://github.com/ele828/react-native-guide" target="_blank" rel="external">React-Native学习指南</a></li>
+<li><a href="http://facebook.github.io/react-native/" target="_blank" rel="external">Facebook的react-native</a></li>
+<li><a href="http://www.liaohuqiu.net/cn/posts/react-native-1/" target="_blank" rel="external">React Native: 配置和起步</a></li>
+<li><a href="http://www.liaohuqiu.net/cn/posts/react-native-android-package/" target="_blank" rel="external">React Native: Android 的打包</a></li>
+<li><a href="http://www.jianshu.com/p/847a54e0c385" target="_blank" rel="external">React Native For Android初体验</a></li>
+<li><a href="https://github.com/w4lle/JianDan-React-Native" target="_blank" rel="external">JianDan-React-Native</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI1MTA1MzM2Nw==&amp;mid=207782506&amp;idx=1&amp;sn=3ff6b03c0d59fbda406f64739d9272cf&amp;scene=1&amp;srcid=1009Q3qo6mLeT2ydjdzUwLQ7&amp;from=groupmessage&amp;isappinstalled=0#rd" target="_blank" rel="external">React Native For Android 架构初探</a></li>
+<li><a href="https://github.com/race604/react-native-viewpager" target="_blank" rel="external">react-native-viewpager</a></li>
+<li><a href="http://www.race604.com/react-native-android-practice/" target="_blank" rel="external">React Native for Android 实践 – 实现知乎日报客户端</a></li>
+</ul>
+<h3 id="Android插件化开发与动态加载"><a href="#Android插件化开发与动态加载" class="headerlink" title="Android插件化开发与动态加载"></a>Android插件化开发与动态加载</h3><ul>
+<li><a href="https://github.com/bunnyblue/ACDD" target="_blank" rel="external">OpenAtlas，已改名为ACDD，可以在手机淘宝中见到踪影</a></li>
+<li><a href="https://github.com/Qihoo360/DroidPlugin" target="_blank" rel="external">360的DroidPlugin</a></li>
+<li><a href="https://github.com/singwhatiwanna/dynamic-load-apk" target="_blank" rel="external">dynamic-load-apk</a></li>
+<li><a href="https://github.com/CtripMobile/DynamicAPK" target="_blank" rel="external">携程DynamicAPK</a></li>
+<li><a href="http://tech.meituan.com/mt-android-auto-split-dex.html" target="_blank" rel="external">美团分包</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ==&amp;mid=207151651&amp;idx=1&amp;sn=9eab282711f4eb2b4daf2fbae5a5ca9a&amp;3rd=MzA3MDU4NTYzMw==&amp;scene=6#rd" target="_blank" rel="external">微信/手Q加载方案</a></li>
+<li><a href="https://github.com/wequick/Small" target="_blank" rel="external">Small</a></li>
+<li><a href="http://www.androidblog.cn/index.php/Index/detail/id/16" target="_blank" rel="external">Android博客周刊专题之《插件化开发》</a></li>
+<li><a href="https://github.com/asLody/TurboDex" target="_blank" rel="external">Fast load dex in memory</a></li>
+<li><a href="https://github.com/limpoxe/Android-Plugin-Framework" target="_blank" rel="external">Android Plugin Framework 插件开发框架及示例程序，原理介绍等</a></li>
+</ul>
+<h3 id="Android-热更新"><a href="#Android-热更新" class="headerlink" title="Android 热更新"></a>Android 热更新</h3><ul>
+<li><a href="https://github.com/alibaba/dexposed" target="_blank" rel="external">dexposed</a></li>
+<li><a href="https://github.com/alibaba/AndFix" target="_blank" rel="external">AndFix</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI1MTA1MzM2Nw==&amp;mid=400118620&amp;idx=1&amp;sn=b4fdd5055731290eef12ad0d17f39d4a&amp;scene=0#wechat_redirect" target="_blank" rel="external">QQ空间热修复</a></li>
+<li><a href="https://github.com/dodola/HotFix" target="_blank" rel="external">QQ空间热修复实现方案</a></li>
+<li><a href="https://github.com/jasonross/Nuwa" target="_blank" rel="external">Nuwa 女娲</a></li>
+</ul>
+<h3 id="Android-加固与反编译"><a href="#Android-加固与反编译" class="headerlink" title="Android 加固与反编译"></a>Android 加固与反编译</h3><ul>
+<li><a href="https://github.com/Juude/droidReverse" target="_blank" rel="external">android反编译工具的合集</a></li>
+<li><a href="http://ibotpeaches.github.io/Apktool/" target="_blank" rel="external">Apktool</a></li>
+<li><a href="http://sourceforge.net/projects/dex2jar/" target="_blank" rel="external">dex2jar</a></li>
+<li><a href="https://github.com/MasonLiuChn/DecompileApk" target="_blank" rel="external">DecompileApk</a></li>
+<li><a href="http://www.jianshu.com/p/856bf5b437aa" target="_blank" rel="external">Android APK加固技术方案调研</a></li>
+<li><a href="https://github.com/joker535/Baffle" target="_blank" rel="external">Android apk包res 资源混淆工具</a></li>
+<li><a href="https://github.com/shwenzhang/AndResGuard" target="_blank" rel="external">微信资源混淆</a></li>
+<li><a href="http://tech.meituan.com/mt-android-resource-obfuscation.html" target="_blank" rel="external">美团Android资源混淆保护实践</a></li>
+</ul>
+<h3 id="Android-Studio专题"><a href="#Android-Studio专题" class="headerlink" title="Android Studio专题"></a>Android Studio专题</h3><ul>
+<li><a href="https://github.com/rholder/gradle-view" target="_blank" rel="external">查看依赖关系的插件</a></li>
+<li><a href="https://segmentfault.com/a/1190000004229002" target="_blank" rel="external">Gradle for Android</a></li>
+<li><a href="https://github.com/judasn/IntelliJ-IDEA-Tutorial" target="_blank" rel="external">IntelliJ IDEA 简体中文专题教程</a></li>
+<li><a href="http://tianweishu.com/2015/12/21/android-studio-debug-tips-you-may-not-know/" target="_blank" rel="external">Android Studio 你不知道的调试技巧</a></li>
+<li><a href="http://www.jayfeng.com/2015/11/07/Android%E6%89%93%E5%8C%85%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/" target="_blank" rel="external">Android打包的那些事</a></li>
+<li><a href="http://google.github.io/android-gradle-dsl/current/" target="_blank" rel="external">谷歌Gradle官方文档</a></li>
+<li><a href="https://github.com/keyboardsurfer/idea-live-templates" target="_blank" rel="external">idea-live-templates 模板</a></li>
+<li><a href="https://github.com/KeepSafe/dexcount-gradle-plugin" target="_blank" rel="external">方法数统计插件，可用于统计是否达到65536个方法</a></li>
+<li><a href="https://github.com/winterDroid/android-drawable-importer-intellij-plugin" target="_blank" rel="external">Android-Drawable-Importer插件</a></li>
+<li><a href="https://github.com/zzz40500/GsonFormat" target="_blank" rel="external">GsonFormat Json对应的Bean快速生成插件</a></li>
+<li><a href="https://github.com/inmite/android-selector-chapek" target="_blank" rel="external">android-selector-chapek Selector生成插件</a></li>
+<li><a href="https://github.com/avast/android-butterknife-zelezny" target="_blank" rel="external">快速生成butterknife注解插件</a></li>
+<li><a href="https://github.com/konifar/android-material-design-icon-generator-plugin" target="_blank" rel="external">android-material-design-icon-generator图标插件</a></li>
+<li><a href="https://github.com/evant/gradle-retrolambda" target="_blank" rel="external">Retrolambda 在java 6 7中使用 lambda表达式插件</a></li>
+<li><a href="https://github.com/ligi/GradleDependenciesHelperPlugin" target="_blank" rel="external">Gradle依赖自动补齐插件</a></li>
+<li><a href="https://github.com/nicoulaj/idea-markdown" target="_blank" rel="external">idea-markdown编辑器插件</a></li>
+<li><a href="https://github.com/Haehnchen/idea-android-studio-plugin" target="_blank" rel="external">从布局中生成View的声明插件</a></li>
+<li><a href="https://www.codota.com/" target="_blank" rel="external">codota代码片段搜索，支持Chrome和Android Studio</a></li>
+<li><a href="https://github.com/dmytrodanylyk/folding-plugin" target="_blank" rel="external">布局文件分组插件</a></li>
+<li><a href="https://github.com/JerzyPuchalski/Android-DPI-Calculator" target="_blank" rel="external">DPI计算插件</a></li>
+<li><a href="https://github.com/msdx/gradle-publish" target="_blank" rel="external">gradle-publish 发布库插件</a></li>
+<li><a href="https://github.com/andforce/release-android-lib-to-jcenter" target="_blank" rel="external">发布lib到jcenter</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/vysor-beta/gidgenkbbabolejbgbpnhbimgjbffefm" target="_blank" rel="external">vysor 这个是Chrome的插件，电脑操作手机</a></li>
+<li><a href="http://www.developerphil.com/android-studio-tips-tricks-moving-around/" target="_blank" rel="external">android-studio-tips-tricks-moving-around/</a></li>
+<li><a href="http://www.developerphil.com/android-studio-tips-of-the-day-roundup-1/" target="_blank" rel="external">http://www.developerphil.com/android-studio-tips-of-the-day-roundup-1/</a></li>
+<li><a href="http://www.developerphil.com/android-studio-tips-of-the-day-roundup-2/" target="_blank" rel="external">http://www.developerphil.com/android-studio-tips-of-the-day-roundup-2/</a></li>
+<li><a href="http://www.developerphil.com/android-studio-tips-of-the-day-roundup-3/" target="_blank" rel="external">http://www.developerphil.com/android-studio-tips-of-the-day-roundup-3/</a></li>
+<li><a href="http://www.developerphil.com/android-studio-tips-of-the-day-roundup-4/" target="_blank" rel="external">http://www.developerphil.com/android-studio-tips-of-the-day-roundup-4/</a></li>
+<li><a href="http://www.developerphil.com/android-studio-tips-of-the-day-roundup-5/" target="_blank" rel="external">http://www.developerphil.com/android-studio-tips-of-the-day-roundup-5/</a></li>
+<li><a href="http://www.developerphil.com/android-studio-tips-of-the-day-roundup-6/" target="_blank" rel="external">http://www.developerphil.com/android-studio-tips-of-the-day-roundup-6/</a></li>
+<li><a href="http://jiajixin.cn/2015/10/11/android-studio-plugin-dev/" target="_blank" rel="external">Android Studio插件开发</a></li>
+<li><a href="http://jiajixin.cn/2015/10/11/android-sdk-mirror/" target="_blank" rel="external">Android SDK镜像服务器搭建</a></li>
+</ul>
+<h3 id="RxJava与RxAndroid学习资源"><a href="#RxJava与RxAndroid学习资源" class="headerlink" title="RxJava与RxAndroid学习资源"></a>RxJava与RxAndroid学习资源</h3><ul>
+<li><a href="https://github.com/KeepSafe/ReLinker" target="_blank" rel="external">ReLinker 安全加载so库的方式</a></li>
+<li><a href="https://github.com/ReactiveX/RxJava/" target="_blank" rel="external">RxJava Github地址</a></li>
+<li><a href="https://github.com/ReactiveX/RxAndroid" target="_blank" rel="external">RxAndroid Github地址</a></li>
+<li><a href="https://github.com/mcxiaoke/RxDocs" target="_blank" rel="external">RxJava中文文档翻译</a></li>
+<li><a href="https://github.com/lzyzsd/Awesome-RxJava" target="_blank" rel="external">Awesome-RxJava</a></li>
+<li><a href="http://www.jianshu.com/p/72911b9ba2d7" target="_blank" rel="external">在正确的线程上观察</a></li>
+<li><a href="http://gank.io/post/560e15be2dca930e00da1083" target="_blank" rel="external">给 Android 开发者的 RxJava 详解</a></li>
+<li><a href="https://segmentfault.com/a/1190000004049490" target="_blank" rel="external">谜之RxJava （一） —— 最基本的观察者模式</a></li>
+<li><a href="https://segmentfault.com/a/1190000004049841" target="_blank" rel="external">谜之RxJava （二） —— Magic Lift</a></li>
+<li><a href="https://segmentfault.com/a/1190000004051191" target="_blank" rel="external">迷之RxJava （三）—— 线程切换</a></li>
+<li><a href="https://segmentfault.com/a/1190000004855661" target="_blank" rel="external">迷之RxJava （三）update —— 线程切换（二）</a></li>
+<li><a href="https://segmentfault.com/a/1190000004856071" target="_blank" rel="external">迷之RxJava （三）update 2 —— subscribeOn 和 observeOn 的区别</a></li>
+<li><a href="https://segmentfault.com/a/1190000004077117" target="_blank" rel="external">迷之RxJava（四）—— Retrofit和RxJava的基情</a></li>
+</ul>
+<h3 id="Android-开发中值得看的优秀内容和工具"><a href="#Android-开发中值得看的优秀内容和工具" class="headerlink" title="Android 开发中值得看的优秀内容和工具"></a>Android 开发中值得看的优秀内容和工具</h3><ul>
+<li><a href="https://github.com/CameloeAnthony/AndroidArchitectureCollection/blob/master/README.md" target="_blank" rel="external">安卓架构文章合集（a collection of android Architecture）</a></li>
+<li><a href="http://www.eyrefree.org/2016/03/23/2016-03-23-Hexo-Coding-Pages/" target="_blank" rel="external">OS X 下使用 Hexo 和 Coding Pages 搭建静态博客</a></li>
+<li><a href="http://androidxref.com" target="_blank" rel="external">Android系统源码查看，支持在线跟踪引用</a></li>
+<li><a href="http://jiajixin.cn" target="_blank" rel="external">贾吉鑫</a></li>
+<li><a href="http://wangxinghe.me/blog/2016-02-25/android-tools-traceview/" target="_blank" rel="external">TraceView性能优化工具使用</a></li>
+<li><a href="https://github.com/facebook/network-connection-class" target="_blank" rel="external">network-connection-class</a></li>
+<li><a href="https://github.com/amfe/article" target="_blank" rel="external">阿里巴巴技术文章</a></li>
+<li><a href="http://www.jayfeng.com/2015/11/07/Android%E6%89%93%E5%8C%85%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/" target="_blank" rel="external">Android打包的那些事</a></li>
+<li><a href="http://www.infoq.com/cn/android-weekly/" target="_blank" rel="external">InfoQAndroid周报</a></li>
+<li><a href="http://www.devtf.cn/" target="_blank" rel="external">开发技术前线</a></li>
+<li><a href="http://tech.meituan.com/mt-android-auto-split-dex.html" target="_blank" rel="external">美团Android DEX自动拆包及动态加载简介</a></li>
+<li><a href="https://github.com/kesenhoo/android-training-course-in-chinese" target="_blank" rel="external">Android官方培训课程中文版</a></li>
+<li><a href="https://github.com/bboyfeiyu/android-tech-frontier" target="_blank" rel="external">一个定期翻译国外Android优质的技术、开源库、软件架构设计、测试等文章的开源项目</a></li>
+<li><a href="https://github.com/codepath/android_guides" target="_blank" rel="external">Android Guides</a></li>
+<li><a href="https://github.com/android-cn/android-open-project-analysis" target="_blank" rel="external">Android 开源项目源码解析</a></li>
+<li><a href="http://chiuki.github.io/android-shaders-filters" target="_blank" rel="external">Android 图像处理教学</a></li>
+<li><a href="https://github.com/Trinea/android-open-project" target="_blank" rel="external">Android 开源项目分类汇总</a> </li>
+<li><a href="https://github.com/simple-android-framework-exchange/the-fucking-traps-in-android-dev" target="_blank" rel="external">开发过程中遇到的坑</a></li>
+<li><a href="https://github.com/aosp-exchange-group/share" target="_blank" rel="external">Android 开源交流</a></li>
+<li><a href="https://github.com/simple-android-framework-exchange/simple-android-opensource-framework" target="_blank" rel="external">Android 著名开源库的简版实现</a></li>
+<li><a href="https://github.com/android-cn/android-discuss" target="_blank" rel="external">Android 问题交流讨论，大部分是面试题</a> </li>
+<li><a href="https://github.com/simple-android-framework-exchange/android_design_patterns_analysis" target="_blank" rel="external">android 设计模式</a></li>
+<li><a href="https://github.com/android-cn/android-jobs" target="_blank" rel="external">Android 全国职位列表</a></li>
+<li><a href="https://github.com/aosp-exchange-group/fuck-2014-flirt-2015" target="_blank" rel="external">fuck-2014-flirt-2015</a></li>
+<li><a href="http://www.androiddevtools.cn/" target="_blank" rel="external">AndroidDevTools开发相关资料下载</a></li>
+<li><a href="https://github.com/futurice/android-best-practices" target="_blank" rel="external">android-best-practices最佳实践</a></li>
+<li><a href="https://github.com/iluwatar/java-design-patterns" target="_blank" rel="external">java设计模式</a></li>
+<li><a href="https://github.com/tianzhijiexian/Android-Best-Practices" target="_blank" rel="external">Android最佳实践示例</a></li>
+<li><a href="http://droidyue.com/blog/2014/09/20/interaction-between-java-and-javascript-in-android/?comefrom=http://blogread.cn/news/" target="_blank" rel="external">Android 中 Java 与JavaScript 交互最详尽的总结</a></li>
+<li><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0824/3356.html" target="_blank" rel="external">如何为drawable着色</a></li>
+<li><a href="http://www.race604.com/tint-drawable/" target="_blank" rel="external">Drawable 着色的后向兼容方案</a></li>
+<li><a href="https://github.com/lightSky/Awesome-MaterialDesign" target="_blank" rel="external">Awesome-MaterialDesign</a></li>
+<li><a href="https://github.com/lizhangqu/InterviewQuestion" target="_blank" rel="external">Android 面试题InterviewQuestion</a></li>
+<li><a href="https://github.com/JStumpp/awesome-android" target="_blank" rel="external">awesome-android</a></li>
+<li><a href="https://futurestud.io/blog/retrofit-getting-started-and-android-client/" target="_blank" rel="external">Retrofit相关文章</a></li>
+<li><a href="http://litesuits.com/" target="_blank" rel="external">Lite Android</a></li>
+<li><a href="http://bugly.qq.com/blog/" target="_blank" rel="external">Bugly Blog</a></li>
+<li><a href="http://gold.xitu.io/#/tag/Android" target="_blank" rel="external">掘金</a></li>
+</ul>
+<h3 id="Android-开源软件"><a href="#Android-开源软件" class="headerlink" title="Android 开源软件"></a>Android 开源软件</h3><ul>
+<li><a href="https://github.com/wangdan/AisenWeiBo" target="_blank" rel="external">一个第三方开源微博</a></li>
+<li><a href="https://github.com/openproject/AndroidDigest" target="_blank" rel="external">android相关的干货(文摘，名博，github等等)</a></li>
+<li><a href="https://github.com/Leaking/WeGit" target="_blank" rel="external">第三方github客户端</a></li>
+<li><a href="http://git.oschina.net/oschina/" target="_blank" rel="external">开源中国的系列软件</a></li>
+<li><a href="https://github.com/Jhuster/EWeightScale" target="_blank" rel="external">体重档案</a></li>
+<li><a href="http://skillcollege.github.io/SimplifyReader/" target="_blank" rel="external">Simplifyreader</a></li>
+<li><a href="https://github.com/lzjun567/XiYuanFangApp" target="_blank" rel="external">西源坊</a></li>
+</ul>
+<h3 id="Android-开发辅助工具"><a href="#Android-开发辅助工具" class="headerlink" title="Android 开发辅助工具"></a>Android 开发辅助工具</h3><ul>
+<li><a href="http://apps.evozi.com/apk-downloader/" target="_blank" rel="external">Google Play APK下载器</a></li>
+<li><a href="http://www.slideshare.net/" target="_blank" rel="external">slideshare</a></li>
+<li><a href="https://www.codota.com/" target="_blank" rel="external">codota代码片段搜索，支持Chrome和Android Studio</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/vysor-beta/gidgenkbbabolejbgbpnhbimgjbffefm" target="_blank" rel="external">vysor 这个是Chrome的插件，电脑操作手机</a></li>
+<li><a href="https://github.com/buunguyen/octotree" target="_blank" rel="external">Browser extension to display GitHub code in tree format</a></li>
+<li><a href="http://laod.cn/hosts/2015-google-hosts.html" target="_blank" rel="external">google hosts翻墙，有vpn的忽略</a></li>
+<li><a href="http://tool.oschina.net/" target="_blank" rel="external">开源中国在线工具</a></li>
+<li><a href="http://apistore.baidu.com/" target="_blank" rel="external">百度ApiStore</a></li>
+<li><a href="https://github.com/vim-scripts/Auto-Pairs" target="_blank" rel="external">Vim插件</a></li>
+<li><a href="https://github.com/macdao/ocds-guide-to-setting-up-mac" target="_blank" rel="external">强迫症的 Mac 设置指南</a></li>
+<li><a href="https://github.com/judasn/Linux-Tutorial" target="_blank" rel="external">Linux-Tutorial</a></li>
+<li><a href="https://github.com/judasn/Markdown-Syntax-CN" target="_blank" rel="external">Markdown-Syntax-CN</a></li>
+</ul>
+<h3 id="Android-推送（含IM）"><a href="#Android-推送（含IM）" class="headerlink" title="Android 推送（含IM）"></a>Android 推送（含IM）</h3><ul>
+<li><a href="http://www.easemob.com/" target="_blank" rel="external">环信，支持即时音视频</a></li>
+<li><a href="http://www.qcloud.com/product/avc.html" target="_blank" rel="external">腾讯云通讯，支持即时音视频</a></li>
+<li><a href="https://www.jpush.cn/" target="_blank" rel="external">极光推送和IM</a></li>
+<li><a href="http://www.getui.com/" target="_blank" rel="external">个推</a></li>
+<li><a href="http://dev.xiaomi.com/doc/?page_id=1670" target="_blank" rel="external">小米推送，在MIUI上属于系统服务框架，共享系统级长连接</a></li>
+<li><a href="http://push.baidu.com/" target="_blank" rel="external">百度云推送,部分机型收不到推送，如小米，Bug是否修复未知</a></li>
+<li><a href="http://xg.qq.com/xg/" target="_blank" rel="external">腾讯信鸽推送</a></li>
+<li><a href="https://www.umeng.com/push" target="_blank" rel="external">友盟推送</a></li>
+<li><a href="https://leancloud.cn/" target="_blank" rel="external">leancloud</a></li>
+<li><a href="http://www.bmob.cn/products" target="_blank" rel="external">bmob云推送，含IM</a></li>
+<li><a href="https://github.com/mogujie/TeamTalk" target="_blank" rel="external">蘑菇街TeamTalk</a></li>
+<li><a href="http://www.igniterealtime.org/downloads/index.jsp" target="_blank" rel="external">Openfire+Smack开源Xmpp解决方案</a></li>
+</ul>
+<h3 id="Android后端等服务"><a href="#Android后端等服务" class="headerlink" title="Android后端等服务"></a>Android后端等服务</h3><ul>
+<li><a href="https://parse.com/" target="_blank" rel="external">parse，缺点是服务器在国外，速度慢</a></li>
+<li><a href="https://leancloud.cn/" target="_blank" rel="external">leancloud，国内的，仿parse</a></li>
+<li><a href="http://www.bmob.cn/" target="_blank" rel="external">Bmob后端云</a></li>
+<li><a href="http://www.qiniu.com/" target="_blank" rel="external">七牛云存储</a></li>
+<li><a href="http://www.apicloud.com/" target="_blank" rel="external">apicloud</a></li>
+</ul>
+<h3 id="Android-应用内测平台"><a href="#Android-应用内测平台" class="headerlink" title="Android 应用内测平台"></a>Android 应用内测平台</h3><ul>
+<li><a href="http://www.pgyer.com/" target="_blank" rel="external">蒲公英，内测应用</a></li>
+<li><a href="http://fir.im/" target="_blank" rel="external">Fir.im，内测应用</a></li>
+</ul>
+<h3 id="Android社会化分享，短信验证，意见反馈，支付等相关"><a href="#Android社会化分享，短信验证，意见反馈，支付等相关" class="headerlink" title="Android社会化分享，短信验证，意见反馈，支付等相关"></a>Android社会化分享，短信验证，意见反馈，支付等相关</h3><ul>
+<li><a href="http://www.umeng.com/" target="_blank" rel="external">友盟,社会化分析，意见反馈</a></li>
+<li><a href="http://mob.com/" target="_blank" rel="external">Sharesdk，社会化分析</a></li>
+<li><a href="https://pingxx.com" target="_blank" rel="external">Ping++，支付</a></li>
+<li><a href="http://docs.bmob.cn/androidpay/index.html?menukey=fast_start&amp;key=start_android_pay" target="_blank" rel="external">bmob支付，Bmob为广大开发人员提供的统一、正规的收费手段，让没有企业认证的个人开发者，也能通过支付宝和微信向用户收费</a></li>
+<li><a href="http://www.yuntongxun.com/ability/toPriceTariff" target="_blank" rel="external">容联云通讯</a></li>
+</ul>
+<h3 id="安卓网络层-包含图片"><a href="#安卓网络层-包含图片" class="headerlink" title="安卓网络层(包含图片)"></a>安卓网络层(包含图片)</h3><ul>
+<li><a href="https://github.com/square/okhttp" target="_blank" rel="external">okhttp</a></li>
+<li><a href="https://github.com/square/retrofit" target="_blank" rel="external">retrofit</a></li>
+<li><a href="http://square.github.io/picasso/" target="_blank" rel="external">picasso</a></li>
+<li><a href="https://android.googlesource.com/platform/frameworks/volley" target="_blank" rel="external">Volley</a></li>
+<li><a href="https://github.com/facebook/fresco" target="_blank" rel="external">fresco</a></li>
+<li><a href="https://github.com/nostra13/Android-Universal-Image-Loader" target="_blank" rel="external">Android-Universal-Image-Loader</a></li>
+<li><a href="https://github.com/stephanenicolas/robospice" target="_blank" rel="external">robospice</a></li>
+<li><a href="http://loopj.com/android-async-http/" target="_blank" rel="external">android-async-http</a></li>
+</ul>
+<h3 id="安卓orm框架，用得比较多的就GreenDao，Ormlite"><a href="#安卓orm框架，用得比较多的就GreenDao，Ormlite" class="headerlink" title="安卓orm框架，用得比较多的就GreenDao，Ormlite"></a>安卓orm框架，用得比较多的就GreenDao，Ormlite</h3><ul>
+<li><a href="http://greendao-orm.com/" target="_blank" rel="external">greenDAO</a></li>
+<li><a href="http://ormlite.com/sqlite_java_android_orm.shtml" target="_blank" rel="external">ORMLite</a></li>
+<li><a href="https://github.com/pardom/ActiveAndroid/wiki/Getting-started" target="_blank" rel="external">ActiveAndroid</a></li>
+<li><a href="http://satyan.github.io/sugar/index.html" target="_blank" rel="external">SugarORM</a></li>
+<li><a href="http://siminov.github.io/android-orm/" target="_blank" rel="external">Siminov</a></li>
+<li><a href="http://www.androrm.net/" target="_blank" rel="external">androrm</a></li>
+<li><a href="https://bitbucket.org/qbusict/cupboard/wiki/GettingStarted" target="_blank" rel="external">cupboard</a></li>
+</ul>
+<h3 id="安卓Json解析"><a href="#安卓Json解析" class="headerlink" title="安卓Json解析"></a>安卓Json解析</h3><ul>
+<li><a href="https://github.com/google/gson" target="_blank" rel="external">Gson,用法简单，速度慢</a></li>
+<li><a href="https://github.com/alibaba/fastjson" target="_blank" rel="external">fastjson，号称最快</a></li>
+<li><a href="https://github.com/FasterXML/jackson" target="_blank" rel="external">jackson</a></li>
+</ul>
+<h3 id="安卓开发值得关注的库"><a href="#安卓开发值得关注的库" class="headerlink" title="安卓开发值得关注的库"></a>安卓开发值得关注的库</h3><ul>
+<li><a href="https://github.com/mthli/SugarTask" target="_blank" rel="external">SugarTask</a></li>
+<li><a href="https://github.com/taoliuh/v2ex" target="_blank" rel="external">sync adapter</a></li>
+<li><a href="https://github.com/badoo/android-weak-handler" target="_blank" rel="external">Android Weak Handler防止内存泄露</a></li>
+<li><a href="https://github.com/path/android-priority-jobqueue" target="_blank" rel="external">Android Priority Job Queue 异步任务调度</a></li>
+<li><a href="https://github.com/H07000223/FlycoDialog_Master" target="_blank" rel="external">Android对话框</a></li>
+<li><a href="https://github.com/tianzhijiexian/ExRecyclerView/" target="_blank" rel="external">扩展的RecyclerView，拥有添加头、底等多种操作</a></li>
+<li><a href="https://github.com/lightSky/Awesome-MaterialDesign" target="_blank" rel="external">MaterialDesign相关库</a></li>
+<li><a href="https://github.com/ikew0ng/SwipeBackLayout" target="_blank" rel="external">右滑返回SwipeBackLayout</a></li>
+<li><a href="https://github.com/JulienGenoud/android-percent-support-lib-sample" target="_blank" rel="external">百分比布局</a></li>
+<li><a href="https://github.com/greenrobot/EventBus" target="_blank" rel="external">EventBus</a></li>
+<li><a href="https://github.com/ksoichiro/Android-ObservableScrollView/" target="_blank" rel="external">ObservableScrollView</a></li>
+<li><a href="https://github.com/openproject/LessCode" target="_blank" rel="external">工具库less code, more efficient for android</a></li>
+<li><a href="https://github.com/JoanZapata/base-adapter-helper" target="_blank" rel="external">通用适配器</a></li>
+<li><a href="https://github.com/SnowdreamFramework/android-log" target="_blank" rel="external">android-log</a></li>
+<li><a href="http://nineoldandroids.com/" target="_blank" rel="external">NineOldAndroids</a></li>
+<li><a href="https://github.com/jgilfelt/android-viewbadger" target="_blank" rel="external">BadgeView </a></li>
+<li><a href="https://github.com/hdodenhof/CircleImageView" target="_blank" rel="external">CircleImageView</a></li>
+<li><a href="https://github.com/MostafaGazar/CustomShapeImageView" target="_blank" rel="external">CustomShapeImageView</a></li>
+<li><a href="https://github.com/pedant/sweet-alert-dialog" target="_blank" rel="external">SweetAlert for Android, a beautiful and clever alert dialog</a></li>
+<li><a href="https://github.com/johannilsson/android-pulltorefresh" target="_blank" rel="external">android-pulltorefresh</a></li>
+<li><a href="https://github.com/jfeinstein10/SlidingMenu" target="_blank" rel="external">SlidingMenu</a></li>
+<li><a href="https://github.com/JakeWharton/ViewPagerIndicator" target="_blank" rel="external">ViewPagerIndicator</a></li>
+<li><a href="https://github.com/daimajia/AndroidViewAnimations" target="_blank" rel="external">一个动画集合库</a></li>
+<li><a href="https://github.com/JoanZapata/android-iconify" target="_blank" rel="external">FontAwesome for Android</a></li>
+<li><a href="https://github.com/lucasr/twoway-view" target="_blank" rel="external">RecyclerView made simple</a></li>
+<li><a href="http://jsoup.org/" target="_blank" rel="external">jsoup库(java)</a></li>
+<li><a href="https://github.com/maarek/android-wheel" target="_blank" rel="external">android-wheel</a></li>
+<li><a href="https://github.com/wyouflf/xUtils" target="_blank" rel="external">xUtils</a></li>
+<li><a href="https://github.com/Trinea/android-common" target="_blank" rel="external">android-common</a></li>
+<li><a href="https://github.com/zxing/zxing" target="_blank" rel="external">zxing</a></li>
+<li><a href="https://github.com/wangjiegulu/AndroidBucket" target="_blank" rel="external">Android开发常用整理</a></li>
+<li><a href="https://github.com/ZhaoKaiQiang/ParticleLayout" target="_blank" rel="external">左滑粒子删除效果</a></li>
+<li><a href="https://github.com/typicode/json-server" target="_blank" rel="external">JSON Server：零编码快速“伪造” REST API</a></li>
+<li><a href="https://github.com/owncloud/" target="_blank" rel="external">owncloud</a></li>
+</ul>
+<h3 id="安卓资源相关"><a href="#安卓资源相关" class="headerlink" title="安卓资源相关"></a>安卓资源相关</h3><ul>
+<li><a href="http://androiddrawables.com/" target="_blank" rel="external">安卓每个版本的Drawable图标</a></li>
+<li><a href="https://github.com/liltof/font-awsome-for-android" target="_blank" rel="external">FontAwesome字体图标安卓字符串</a></li>
+<li><a href="http://www.google.com/design/spec/style/color.html" target="_blank" rel="external">色系</a></li>
+<li><a href="https://github.com/MatthewYork/Colours" target="_blank" rel="external">颜色库</a></li>
+<li><a href="https://www.iconfinder.com/" target="_blank" rel="external">IconFinder图标资源</a></li>
+<li><a href="http://www.iconfont.cn/" target="_blank" rel="external">阿里巴巴矢量图</a></li>
+<li><a href="https://icomoon.io/app/#/select" target="_blank" rel="external">icomoon</a></li>
+<li><a href="http://romannurik.github.io/AndroidAssetStudio/" target="_blank" rel="external">AndroidAssetStudio</a></li>
+<li><a href="http://android-holo-colors.com/" target="_blank" rel="external">Android Holo颜色生成器</a></li>
+<li><a href="http://jgilfelt.github.io/android-actionbarstylegenerator/" target="_blank" rel="external">Android Action Bar Style Generator</a></li>
+<li><a href="http://romannurik.github.io/AndroidAssetStudio/nine-patches.html" target="_blank" rel="external">在线.9.png图片生成器</a></li>
+<li><a href="http://angrytools.com/android/button/" target="_blank" rel="external">安卓button在线制作工具</a></li>
+<li><a href="http://omapzoom.org/?p=platform/frameworks/base.git;a=blob;f=core/res/res/values/themes.xml;hb=master" target="_blank" rel="external">Theme.xml属性</a></li>
+<li><a href="https://www.parse.com/" target="_blank" rel="external">移动APP云计算平台Parse</a></li>
+</ul>
+<h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><ul>
+<li><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程</a></li>
+<li><a href="http://segmentfault.com/a/1190000003836345?utm_source=Weibo&amp;utm_medium=shareLink&amp;utm_campaign=socialShare" target="_blank" rel="external">用 Git Hooks 进行自动部署</a></li>
+</ul>
+<h3 id="Android-NoSql"><a href="#Android-NoSql" class="headerlink" title="Android NoSql"></a>Android NoSql</h3><ul>
+<li><a href="https://github.com/realm/realm-java" target="_blank" rel="external">realm-java</a></li>
+<li><a href="https://github.com/couchbase/couchbase-lite-android" target="_blank" rel="external">couchbase-lite-android</a></li>
+<li><a href="https://github.com/Jearil/SimpleNoSQL" target="_blank" rel="external">SimpleNoSQL</a></li>
+<li><a href="https://github.com/nhachicha/SnappyDB/" target="_blank" rel="external">SnappyDB</a></li>
+</ul>
+<h3 id="设计网站，可以寻找一些酷炫的设计稿"><a href="#设计网站，可以寻找一些酷炫的设计稿" class="headerlink" title="设计网站，可以寻找一些酷炫的设计稿"></a>设计网站，可以寻找一些酷炫的设计稿</h3><ul>
+<li><a href="https://dribbble.com/" target="_blank" rel="external">https://dribbble.com/</a></li>
+<li><a href="http://pttrns.com/" target="_blank" rel="external">http://pttrns.com/</a></li>
+<li><a href="http://capptivate.co/" target="_blank" rel="external">http://capptivate.co/</a></li>
+</ul>
+<h3 id="国外个人博客"><a href="#国外个人博客" class="headerlink" title="国外个人博客"></a>国外个人博客</h3><ul>
+<li><a href="http://jakewharton.com/blog" target="_blank" rel="external">Jakewharton</a></li>
+<li><a href="http://www.curious-creature.com/" target="_blank" rel="external">Romain Guy</a></li>
+<li><a href="http://cyrilmottier.com/" target="_blank" rel="external">Cyril Mottier</a></li>
+<li><a href="http://blog.stylingandroid.com/" target="_blank" rel="external">Mark Allison</a></li>
+<li><a href="http://blog.danlew.net/" target="_blank" rel="external">Daniel Lew</a></li>
+<li><a href="http://www.androidhive.info/" target="_blank" rel="external">Ravi Tamada</a></li>
+<li><a href="http://loseyourmarbles.co/about-me/" target="_blank" rel="external">Chris Nash</a></li>
+<li><a href="http://www.androiduipatterns.com/" target="_blank" rel="external">juhani@fatrobot.io</a></li>
+<li><a href="http://www.grokkingandroid.com/" target="_blank" rel="external">Wolfram Rittmeyer</a></li>
+<li><a href="http://geekyouup.blogspot.com/" target="_blank" rel="external">Rich Hyndman</a></li>
+</ul>
+<h3 id="国外的一些优秀网站"><a href="#国外的一些优秀网站" class="headerlink" title="国外的一些优秀网站"></a>国外的一些优秀网站</h3><ul>
+<li><a href="http://androidweekly.net/" target="_blank" rel="external">androidweekly.net</a></li>
+<li><a href="http://android-developers.blogspot.ca/" target="_blank" rel="external">Android Developers Blog</a></li>
+<li><a href="http://www.vogella.com/tutorials/android.html" target="_blank" rel="external">vogella</a></li>
+<li><a href="http://www.tutorialspoint.com/android/" target="_blank" rel="external">tutorialspoint</a></li>
+<li><a href="http://code.tutsplus.com/categories/android-sdk" target="_blank" rel="external">tutsplus</a></li>
+<li><a href="http://www.coderzheaven.com/android-tutorials/" target="_blank" rel="external">oderzheaven</a></li>
+<li><a href="https://thenewcircle.com/training/android/" target="_blank" rel="external">thenewcircle</a></li>
+<li><a href="http://www.coreservlets.com/android-tutorial/" target="_blank" rel="external">coreservlets</a></li>
+<li><a href="http://droid-blog.net/" target="_blank" rel="external">Droid-Blog</a></li>
+<li><a href="https://www.coursera.org/" target="_blank" rel="external">coursera.org</a></li>
+<li><a href="http://commonsware.com/blog/archive.html" target="_blank" rel="external">commonsware.com</a></li>
+<li><a href="http://android.amberfog.com/" target="_blank" rel="external">http://android.amberfog.com/</a></li>
+<li><a href="http://www.anddev.org/" target="_blank" rel="external">anddev</a></li>
+</ul>
+<h3 id="Ibeacon与蓝牙4-0相关"><a href="#Ibeacon与蓝牙4-0相关" class="headerlink" title="Ibeacon与蓝牙4.0相关"></a>Ibeacon与蓝牙4.0相关</h3><ul>
+<li><a href="https://github.com/AltBeacon/android-beacon-library" target="_blank" rel="external">一个ibeacon交互库</a></li>
+<li><a href="https://github.com/AprilBrother/AprilBeacon-Android-SDK" target="_blank" rel="external">AprilBeacon-Android-sdk</a></li>
+<li><a href="https://github.com/Estimote/Android-SDK" target="_blank" rel="external">Estimote SDK</a></li>
+<li><a href="https://github.com/devunwired/accessory-samples" target="_blank" rel="external">蓝牙4.0相关</a></li>
+</ul>
+<h3 id="WEB与前端相关"><a href="#WEB与前端相关" class="headerlink" title="WEB与前端相关"></a>WEB与前端相关</h3><ul>
+<li><a href="http://www.yiichina.com/" target="_blank" rel="external">yii</a></li>
+<li><a href="http://yiibooster.clevertech.biz/" target="_blank" rel="external">yiibooster</a></li>
+<li><a href="https://github.com/dodgepudding/wechat-php-sdk" target="_blank" rel="external">wechat-php-sdk</a></li>
+<li><a href="https://github.com/acczefly/php_sae_storage" target="_blank" rel="external">php_sae_storage</a></li>
+<li><a href="http://www.bootcss.com/" target="_blank" rel="external">Bootstrap</a></li>
+<li><a href="https://github.com/FortAwesome/Font-Awesome" target="_blank" rel="external">Font-Awesome字体图标</a></li>
+<li><a href="https://github.com/sindresorhus/sublime-autoprefixer" target="_blank" rel="external">sublime浏览器前缀插件</a></li>
+<li><a href="https://github.com/mattbryson/TouchSwipe-Jquery-Plugin" target="_blank" rel="external">一个手势库</a></li>
+<li><a href="https://github.com/markusslima/bootstrap-filestyle" target="_blank" rel="external">bootstrap-filestyle</a></li>
+<li><a href="https://github.com/znddzxx112/bitcms" target="_blank" rel="external">基于Codeigniter的CMS系统</a></li>
+</ul>
+
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">标签</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/Android/">Android</a>
+
+            </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/06/28/如何突破技术瓶颈/" data-tooltip="如何突破技术瓶颈">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://gagarinwjj.github.io/2016/07/18/Android开发中的日常积累/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://gagarinwjj.github.io/2016/07/18/Android开发中的日常积累/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://gagarinwjj.github.io/2016/07/18/Android开发中的日常积累/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#table-of-contents">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+            
+                <div id="ds-thread" class="ds-thread" data-thread-key="2016/07/18/Android开发中的日常积累/"
+     data-title="Android开发中的日常积累" data-url="http://gagarinwjj.github.io/2016/07/18/Android开发中的日常积累/">
+</div>
+
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2016 Gagarinwjj. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/06/28/如何突破技术瓶颈/" data-tooltip="如何突破技术瓶颈">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://gagarinwjj.github.io/2016/07/18/Android开发中的日常积累/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://gagarinwjj.github.io/2016/07/18/Android开发中的日常积累/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://gagarinwjj.github.io/2016/07/18/Android开发中的日常积累/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#table-of-contents">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://gagarinwjj.github.io/2016/07/18/Android开发中的日常积累/">
+                <i class="fa fa-google-plus"></i><span class="">分享到 Google+</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://gagarinwjj.github.io/2016/07/18/Android开发中的日常积累/">
+                <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://gagarinwjj.github.io/2016/07/18/Android开发中的日常积累/">
+                <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="https://avatars0.githubusercontent.com/u/1587247?v=3&amp;s=460"/>
+        
+            <h4 id="about-card-name">Gagarinwjj</h4>
+        
+            <h5 id="about-card-bio"><p>喜欢专研技术，热爱编码和开源。</p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>Android攻城狮</p>
+
+            </h5>
+        
+        
+            <h5 id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                Nanjing
+            </h5>
+        
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+    </body>
+    <!--SCRIPTS-->
+<script src="/assets/js/script-i4qo6jx6jji9fg0dftpya6ivemizsbow4fhow76d8dwpm7m1wbvi378ssumx.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name:'gagarinwjj'};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
+    
+
+
+
+</html>
